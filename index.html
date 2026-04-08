@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>SKIA Status</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --bg: #050509;
+            --card: #0b0b12;
+            --accent: #d4af37;
+            --accent-soft: rgba(212, 175, 55, 0.12);
+            --text: #f5f5f7;
+            --muted: #9b9ba6;
+            --ok: #3dd68c;
+            --warn: #f5a623;
+            --err: #ff4f4f;
+            --border: #1b1b24;
+            --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(circle at top, #11111b 0, #050509 55%, #020207 100%);
+            color: var(--text);
+            font-family: var(--font);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 16px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 960px;
+            background: linear-gradient(145deg, #050509 0, #050509 40%, #0b0b12 100%);
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8), 0 40px 120px rgba(0, 0, 0, 0.9);
+            padding: 28px 28px 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .page::before {
+                content: "";
+                position: absolute;
+                inset: -40%;
+                background: radial-gradient(circle at 0 0, rgba(212, 175, 55, 0.12), transparent 55%), radial-gradient(circle at 100% 0, rgba(212, 175, 55, 0.06), transparent 55%);
+                opacity: 0.9;
+                pointer-events: none;
+            }
+
+        .page-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .brand-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-mark {
+            width: 28px;
+            height: 28px;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            background: radial-gradient(circle at 30% 0, rgba(212, 175, 55, 0.7), transparent 55%), radial-gradient(circle at 70% 100%, rgba(212, 175, 55, 0.35), transparent 60%), radial-gradient(circle at 50% 50%, #050509, #050509 60%, transparent 100%);
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.9), 0 0 40px rgba(212, 175, 55, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .brand-mark::after {
+                content: "";
+                position: absolute;
+                inset: 22%;
+                border-radius: 999px;
+                border: 1px solid rgba(5, 5, 9, 0.9);
+                box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4);
+            }
+
+        .brand-title {
+            font-size: 18px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text);
+        }
+
+        .brand-sub {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(12, 179, 102, 0.08);
+            border: 1px solid rgba(61, 214, 140, 0.4);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--ok);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--ok);
+            box-shadow: 0 0 12px rgba(61, 214, 140, 0.8);
+        }
+
+        .meta {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            align-items: flex-end;
+        }
+
+        .meta-line {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .meta-strong {
+            font-size: 12px;
+            color: var(--text);
+        }
+
+        .hero {
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 22px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .hero-sub {
+            font-size: 13px;
+            color: var(--muted);
+            max-width: 520px;
+        }
+
+            .hero-sub strong {
+                color: var(--accent);
+                font-weight: 500;
+            }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .card {
+            background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 55%), radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.04), transparent 60%), var(--card);
+            border-radius: 18px;
+            border: 1px solid var(--border);
+            padding: 14px 14px 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient( 135deg, rgba(212, 175, 55, 0.12), transparent 40%, transparent 60%, rgba(212, 175, 55, 0.06) );
+                opacity: 0.18;
+                pointer-events: none;
+            }
+
+        .card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--muted);
+        }
+
+        .card-badge {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            color: var(--accent);
+            background: rgba(212, 175, 55, 0.08);
+        }
+
+        .incident {
+            margin-bottom: 10px;
+            padding: 8px 10px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .incident-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4px;
+        }
+
+        .incident-title {
+            font-size: 13px;
+            color: var(--text);
+        }
+
+        .incident-status {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--ok);
+        }
+
+            .incident-status.resolved {
+                color: var(--ok);
+            }
+
+            .incident-status.investigating {
+                color: var(--warn);
+            }
+
+            .incident-status.outage {
+                color: var(--err);
+            }
+
+        .incident-meta {
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .incident-body {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .systems {
+            display: grid;
+            grid-template-columns: 1.2fr 1.2fr;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .system-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 8px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .system-name {
+            color: var(--text);
+        }
+
+        .system-status {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--ok);
+        }
+
+            .system-status.degraded {
+                color: var(--warn);
+            }
+
+            .system-status.down {
+                color: var(--err);
+            }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 10px;
+            margin-top: 6px;
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .footer-cta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .btn {
+            border-radius: 999px;
+            padding: 6px 12px;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            border: 1px solid rgba(212, 175, 55, 0.7);
+            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.22), rgba(5, 5, 9, 0.98));
+            color: var(--accent);
+            cursor: default;
+            white-space: nowrap;
+        }
+
+        .tagline {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                padding: 20px 16px 16px;
+                border-radius: 18px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .meta {
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .systems {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page">
+        <div class="page-inner">
+            <header class="header">
+                <div class="brand">
+                    <div class="brand-row">
+                        <div class="brand-mark"></div>
+                        <div>
+                            <div class="brand-title">SKIA Status</div>
+                            <div class="brand-sub">One ecosystem. One universe. All SKIA.</div>
+                        </div>
+                    </div>
+                    <div class="status-pill">
+                        <span class="status-dot"></span>
+                        <span>All systems operational</span>
+                    </div>
+                </div>
+                <div class="meta">
+                    <div class="meta-line">Last updated: <span class="meta-strong" id="last-updated">Just now</span></div>
+                    <div class="meta-line">Environment: <span class="meta-strong">Production · Singularity Continuum</span></div>
+                </div>
+            </header>
+
+            <section class="hero">
+                <h1 class="hero-title">Operational overview</h1>
+                <p class="hero-sub">
+                    An unexpected issue recently affected parts of the SKIA ecosystem. The incident has been
+                    <strong>fully resolved</strong>, and all systems are now operating within normal parameters.
+                </p>
+            </section>
+
+            <section class="grid">
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <div class="card-title">Recent incident</div>
+                            <div class="card-badge">Resolved</div>
+                        </div>
+                        <div class="incident">
+                            <div class="incident-header">
+                                <div class="incident-title">Origin DNS resolution failure</div>
+                                <div class="incident-status resolved">Resolved</div>
+                            </div>
+                            <div class="incident-meta">
+                                Start: 2026‑04‑07 22:21 UTC · End: 2026‑04‑07 22:45 UTC
+                            </div>
+                            <div class="incident-body">
+                                Cloudflare reported an <strong>Error 1016 · Origin DNS error</strong> for
+                                <code>status.skia.ca</code> due to a missing origin DNS record. The DNS configuration has been
+                                corrected and traffic is now routing to the intended SKIA status endpoint.
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-inner">
+                        <div class="card-header">
+                            <div class="card-title">Core systems</div>
+                        </div>
+                        <div class="systems">
+                            <div class="system-row">
+                                <span class="system-name">SKIA Frontend</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                            <div class="system-row">
+                                <span class="system-name">SKIA Backend / OS</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                            <div class="system-row">
+                                <span class="system-name">Authentication / Login</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                            <div class="system-row">
+                                <span class="system-name">Chat Engine</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                            <div class="system-row">
+                                <span class="system-name">Image & Video Engines</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                            <div class="system-row">
+                                <span class="system-name">Search & Intelligence</span>
+                                <span class="system-status">Operational</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-cta">
+                    <div class="btn">View full incident history</div>
+                </div>
+                <div class="tagline">
+                    © 2026 SKIA Singularity Continuum · The future is an understatement.
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script>
+    (function () {
+      const el = document.getElementById("last-updated");
+      if (!el) return;
+      const now = new Date();
+      const pad = (n) => (n < 10 ? "0" + n : "" + n);
+      const ts =
+        now.getUTCFullYear() +
+        "-" +
+        pad(now.getUTCMonth() + 1) +
+        "-" +
+        pad(now.getUTCDate()) +
+        " " +
+        pad(now.getUTCHours()) +
+        ":" +
+        pad(now.getUTCMinutes()) +
+        " UTC";
+      el.textContent = ts;
+    })();
+    </script>
+</body>
+</html>

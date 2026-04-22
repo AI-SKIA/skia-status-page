@@ -2,11 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <title>SKIA Status</title>
+    <title>SKIA Status — Incident History</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name='version' content='2026.04.19.v5'>
-    <link rel='icon' type='image/x-icon' href='/favicon.ico'>
-    <link rel='shortcut icon' type='image/x-icon' href='/icon.ico'>
     <style>
         :root {
             --bg: #050509;
@@ -14,7 +11,7 @@
             --accent: #d4af37;
             --accent-soft: rgba(212, 175, 55, 0.12);
             --text: #f5f5f7;
-            --muted: #d4af37;
+            --muted: #9b9ba6;
             --ok: #3dd68c;
             --warn: #f5a623;
             --err: #ff4f4f;
@@ -31,12 +28,40 @@
         body {
             min-height: 100vh;
             background: radial-gradient(circle at top, #11111b 0, #050509 55%, #020207 100%);
-            color: #d4af37;
+            color: var(--text);
             font-family: var(--font);
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 32px 16px;
+        }
+
+        /* FIX: back button was unstyled — class existed in HTML but had no CSS */
+        .back-button {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 20px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: rgba(212, 175, 55, 0.06);
+            color: var(--accent);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            cursor: pointer;
+            font-family: var(--font);
+        }
+
+            .back-button:hover {
+                background: rgba(212, 175, 55, 0.12);
+                border-color: rgba(212, 175, 55, 0.7);
+            }
+
+        .arrow {
+            font-size: 14px;
         }
 
         .page {
@@ -45,7 +70,7 @@
             background: linear-gradient(145deg, #050509 0, #050509 40%, #0b0b12 100%);
             border-radius: 24px;
             border: 1px solid var(--border);
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8), 0 40px 120px rgba(0, 0, 0, 0.9);
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 40px 120px rgba(0,0,0,0.9);
             padding: 28px 28px 24px;
             position: relative;
             overflow: hidden;
@@ -55,7 +80,7 @@
                 content: "";
                 position: absolute;
                 inset: -40%;
-                background: radial-gradient(circle at 0 0, rgba(212, 175, 55, 0.12), transparent 55%), radial-gradient(circle at 100% 0, rgba(212, 175, 55, 0.06), transparent 55%);
+                background: radial-gradient(circle at 0 0, rgba(212,175,55,0.12), transparent 55%), radial-gradient(circle at 100% 0, rgba(212,175,55,0.06), transparent 55%);
                 opacity: 0.9;
                 pointer-events: none;
             }
@@ -89,9 +114,9 @@
             width: 28px;
             height: 28px;
             border-radius: 999px;
-            border: 1px solid rgba(212, 175, 55, 0.6);
-            background: radial-gradient(circle at 30% 0, rgba(212, 175, 55, 0.7), transparent 55%), radial-gradient(circle at 70% 100%, rgba(212, 175, 55, 0.35), transparent 60%), radial-gradient(circle at 50% 50%, #050509, #050509 60%, transparent 100%);
-            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.9), 0 0 40px rgba(212, 175, 55, 0.35);
+            border: 1px solid rgba(212,175,55,0.6);
+            background: radial-gradient(circle at 30% 0, rgba(212,175,55,0.7), transparent 55%), radial-gradient(circle at 70% 100%, rgba(212,175,55,0.35), transparent 60%), radial-gradient(circle at 50% 50%, #050509, #050509 60%, transparent 100%);
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.9), 0 0 40px rgba(212,175,55,0.35);
             position: relative;
             overflow: hidden;
         }
@@ -101,8 +126,8 @@
                 position: absolute;
                 inset: 22%;
                 border-radius: 999px;
-                border: 1px solid rgba(5, 5, 9, 0.9);
-                box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4);
+                border: 1px solid rgba(5,5,9,0.9);
+                box-shadow: 0 0 0 1px rgba(212,175,55,0.4);
             }
 
         .brand-title {
@@ -125,12 +150,13 @@
             gap: 8px;
             padding: 6px 10px;
             border-radius: 999px;
-            background: rgba(12, 179, 102, 0.08);
-            border: 1px solid rgba(61, 214, 140, 0.4);
+            background: rgba(12,179,102,0.08);
+            border: 1px solid rgba(61,214,140,0.4);
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.16em;
             color: var(--ok);
+            margin-top: 8px;
         }
 
         .status-dot {
@@ -138,7 +164,7 @@
             height: 8px;
             border-radius: 999px;
             background: var(--ok);
-            box-shadow: 0 0 12px rgba(61, 214, 140, 0.8);
+            box-shadow: 0 0 12px rgba(61,214,140,0.8);
         }
 
         .meta {
@@ -182,15 +208,15 @@
                 font-weight: 500;
             }
 
-        .grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-            gap: 16px;
+        .incident-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             margin-bottom: 18px;
         }
 
         .card {
-            background: radial-gradient(circle at top left, rgba(212, 175, 55, 0.08), transparent 55%), radial-gradient(circle at bottom right, rgba(212, 175, 55, 0.04), transparent 60%), var(--card);
+            background: radial-gradient(circle at top left, rgba(212,175,55,0.08), transparent 55%), radial-gradient(circle at bottom right, rgba(212,175,55,0.04), transparent 60%), var(--card);
             border-radius: 18px;
             border: 1px solid var(--border);
             padding: 14px 14px 12px;
@@ -202,7 +228,7 @@
                 content: "";
                 position: absolute;
                 inset: 0;
-                background: linear-gradient( 135deg, rgba(212, 175, 55, 0.12), transparent 40%, transparent 60%, rgba(212, 175, 55, 0.06) );
+                background: linear-gradient(135deg, rgba(212,175,55,0.12), transparent 40%, transparent 60%, rgba(212,175,55,0.06));
                 opacity: 0.18;
                 pointer-events: none;
             }
@@ -226,58 +252,12 @@
             color: var(--muted);
         }
 
-        .card-badge {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            padding: 4px 8px;
-            border-radius: 999px;
-            border: 1px solid rgba(212, 175, 55, 0.5);
-            color: var(--accent);
-            background: rgba(212, 175, 55, 0.08);
-        }
-
-        .history-btn {
-            border-radius: 999px;
-            padding: 6px 12px;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.16em;
-            border: 1px solid rgba(212, 175, 55, 0.7);
-            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.22), rgba(5, 5, 9, 0.98));
-            color: var(--accent);
-            cursor: pointer;
-            white-space: nowrap;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Loading state for recent incident */
-        .incident.loading {
-            opacity: 0.6;
-            position: relative;
-        }
-
-            .incident.loading::after {
-                content: 'Loading';
-                position: absolute;
-                right: 12px;
-                top: 12px;
-                font-size: 11px;
-                color: var(--muted);
-                background: rgba(0,0,0,0.25);
-                padding: 4px 8px;
-                border-radius: 6px;
-            }
-
-        .incident {
-            margin-bottom: 10px;
+        .incident-item {
+            margin-bottom: 8px;
             padding: 8px 10px;
             border-radius: 12px;
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: rgba(255,255,255,0.01);
+            border: 1px solid rgba(255,255,255,0.04);
         }
 
         .incident-header {
@@ -296,7 +276,6 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.16em;
-            color: var(--ok);
         }
 
             .incident-status.resolved {
@@ -322,49 +301,13 @@
             color: var(--muted);
         }
 
-        .systems {
-            display: grid;
-            grid-template-columns: 1.2fr 1.2fr;
-            gap: 6px;
-            font-size: 12px;
-        }
-
-        .system-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 6px 8px;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.01);
-            border: 1px solid rgba(255, 255, 255, 0.04);
-        }
-
-        .system-name {
-            color: var(--text);
-        }
-
-        .system-status {
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--ok);
-        }
-
-            .system-status.degraded {
-                color: var(--warn);
-            }
-
-            .system-status.down {
-                color: var(--err);
-            }
-
         .footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            border-top: 1px solid rgba(255,255,255,0.04);
             padding-top: 10px;
-            margin-top: 6px;
+            margin-top: 12px;
             font-size: 11px;
             color: var(--muted);
         }
@@ -381,11 +324,15 @@
             font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.16em;
-            border: 1px solid rgba(212, 175, 55, 0.7);
-            background: radial-gradient(circle at top, rgba(212, 175, 55, 0.22), rgba(5, 5, 9, 0.98));
+            border: 1px solid rgba(212,175,55,0.7);
+            background: radial-gradient(circle at top, rgba(212,175,55,0.22), rgba(5,5,9,0.98));
             color: var(--accent);
             cursor: pointer;
             white-space: nowrap;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .tagline {
@@ -393,6 +340,7 @@
             text-transform: uppercase;
             letter-spacing: 0.18em;
             color: var(--muted);
+            text-align: right;
         }
 
         @media (max-width: 768px) {
@@ -412,23 +360,24 @@
                 text-align: left;
             }
 
-            .grid {
-                grid-template-columns: minmax(0, 1fr);
-            }
-
-            .systems {
-                grid-template-columns: minmax(0, 1fr);
-            }
-
             .footer {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 6px;
             }
+
+            .tagline {
+                text-align: left;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- FIX: back button now has CSS and links correctly to index.html (relative) -->
+    <button class="back-button" onclick="window.location.href='index.html'">
+        <span class="arrow">←</span> Back
+    </button>
+
     <main class="page">
         <div class="page-inner">
             <header class="header">
@@ -442,79 +391,38 @@
                     </div>
                     <div class="status-pill">
                         <span class="status-dot"></span>
-                        <span id="system-status">All systems operational</span>
+                        <span>Incident history</span>
                     </div>
                 </div>
                 <div class="meta">
-                    <div class="meta-line">Last updated: <span class="meta-strong" id="last-updated">Just now</span></div>
-                    <div class="meta-line">Environment: <span class="meta-strong">Production · Singularity Continuum</span></div>
+                    <div class="meta-line">
+                        Environment: <span class="meta-strong">Production · Singularity Continuum</span>
+                    </div>
                 </div>
             </header>
 
             <section class="hero">
-                <h1 class="hero-title">Operational overview</h1>
-                <p class="hero-sub" id="hero-sub-text">
-                    All systems are operating within normal parameters.
+                <h1 class="hero-title">Incident history</h1>
+                <p class="hero-sub">
+                    A transparent log of incidents affecting the SKIA ecosystem. All times are reported in UTC.
                 </p>
             </section>
 
-            <section class="grid">
-                <article class="card">
-                    <div class="card-inner">
-                        <div class="card-header">
-                            <div class="card-title">Recent incident</div>
-                            <div class="card-badge" id="ri-badge">—</div>
-                        </div>
-                        <div class="incident loading" id="recent-incident">
-                            <div class="incident-header">
-                                <div class="incident-title" id="recent-incident-title">Loading…</div>
-                                <div class="incident-status" id="ri-status">—</div>
-                            </div>
-                            <div class="incident-meta" id="recent-incident-time">—</div>
-                            <div class="incident-body" id="recent-incident-description">—</div>
-                        </div>
+            <section class="card">
+                <div class="card-inner">
+                    <div class="card-header">
+                        <div class="card-title">Recorded incidents</div>
                     </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-inner">
-                        <div class="card-header">
-                            <div class="card-title">Core systems</div>
-                        </div>
-                        <div class="systems">
-                            <div class="system-row">
-                                <span class="system-name">SKIA Frontend</span>
-                                <span class="system-status" data-system="frontend" id="frontend-status">—</span>
-                            </div>
-                            <div class="system-row">
-                                <span class="system-name">SKIA Backend / OS</span>
-                                <span class="system-status" data-system="backend" id="backend-status">—</span>
-                            </div>
-                            <div class="system-row">
-                                <span class="system-name">Database</span>
-                                <span class="system-status" data-system="database" id="database-status">—</span>
-                            </div>
-                            <div class="system-row">
-                                <span class="system-name">LLM Services</span>
-                                <span class="system-status" data-system="llm" id="llm-status">—</span>
-                            </div>
-                            <div class="system-row">
-                                <span class="system-name">Image &amp; Video Engines</span>
-                                <span class="system-status" data-system="image">—</span>
-                            </div>
-                            <div class="system-row">
-                                <span class="system-name">Search &amp; Intelligence</span>
-                                <span class="system-status" data-system="search" id="search-status">—</span>
-                            </div>
-                        </div>
+                    <div id="incident-list" class="incident-list">
+                        <!-- Incidents injected by JS below -->
                     </div>
-                </article>
+                </div>
             </section>
 
             <footer class="footer">
                 <div class="footer-cta">
-                    <!-- FIX: was onclick with absolute /incidents.html — now a proper anchor with relative path -->
-                    <a href="incidents.html" class="history-btn" id="history-link">View Full Incident History</a>
+                    <!-- FIX: relative path back to index.html -->
+                    <a href="index.html" class="btn">← Back to status overview</a>
                 </div>
                 <div class="tagline">
                     © 2026 SKIA Singularity Continuum · The future is an understatement.
@@ -523,6 +431,6 @@
         </div>
     </main>
 
-    <script src="status.js"></script>
+    <script src="incidents.js"></script>
 </body>
 </html>

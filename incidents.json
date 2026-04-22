@@ -1,0 +1,25 @@
+[
+  {
+    "id": "skia-health-2026-04-21",
+    "title": "System degraded — backend, database failure",
+    "status": "investigating",
+    "start": "2026-04-21 10:25 UTC",
+    "impact": "Critical systems failed: backend, database. Suggested actions: Increase backend health-check frequency, add a circuit breaker around /api/health, and enable autoscaling for error bursts. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Standardize metrics and tracing across services, add centralized dashboards and alerting for SLO breaches.",
+    "systems": {
+      "frontend": "operational",
+      "backend": "degraded",
+      "auth": "degraded",
+      "chat": "degraded",
+      "image": "degraded",
+      "search": "degraded"
+    }
+  },
+  {
+    "id": "skia-bridge-sync-2026-04-19",
+    "title": "Sovereign Intelligence Bridge Sync",
+    "status": "resolved",
+    "start": "2026-04-19 03:45 UTC",
+    "end": "2026-04-19 04:00 UTC",
+    "impact": "Successfully synchronized SearXNG live search with the SKIA core intelligence engine. All systems reporting 2026 live data."
+  }
+]

@@ -141,6 +141,40 @@
             box-shadow: 0 0 12px rgba(61, 214, 140, 0.8);
         }
 
+        .status-pill.degraded {
+            background: var(--accent-soft);
+            border-color: var(--warn);
+            color: var(--warn);
+        }
+
+        .status-pill.down {
+            background: var(--accent-soft);
+            border-color: var(--err);
+            color: var(--err);
+        }
+
+        .status-dot.degraded {
+            background: var(--warn);
+            box-shadow: 0 0 12px var(--warn);
+        }
+
+        .status-dot.down {
+            background: var(--err);
+            box-shadow: 0 0 12px var(--err);
+        }
+
+        .status-text {
+            color: var(--ok);
+        }
+
+        .status-text.degraded {
+            color: var(--warn);
+        }
+
+        .status-text.down {
+            color: var(--err);
+        }
+
         .meta {
             text-align: right;
             display: flex;
@@ -319,6 +353,51 @@
 
         .incident-body {
             font-size: 12px;
+            color: var(--muted);
+        }
+
+        .panel-row {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 2px;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .panel-row:last-child {
+            border-bottom: none;
+        }
+
+        .panel-key {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text);
+        }
+
+        .panel-value {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .panel-delta {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .panel-delta.up {
+            color: var(--ok);
+        }
+
+        .panel-delta.down {
+            color: var(--err);
+        }
+
+        .panel-delta.neutral,
+        .panel-meta,
+        .panel-empty {
+            font-size: 11px;
             color: var(--muted);
         }
 
@@ -509,6 +588,13 @@
                         </div>
                     </div>
                 </article>
+            </section>
+
+            <section class="grid">
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Benchmark scores</div></div><div id="benchmark-panel" class="incident-body">No benchmark events yet.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Capability maturity</div></div><div id="capability-panel" class="incident-body">No capability updates yet.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Reasoning engine</div></div><div id="reasoning-panel" class="incident-body">Reasoning mode unavailable.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Memory health</div></div><div id="memory-panel" class="incident-body">Memory metrics unavailable.</div></div></article>
             </section>
 
             <footer class="footer">

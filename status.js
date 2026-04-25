@@ -3,9 +3,7 @@
 
     function text(id, value) {
         var el = document.getElementById(id);
-        if (el) {
-            el.textContent = value;
-        }
+        if (el) el.textContent = value;
     }
 
     function esc(value) {
@@ -30,15 +28,9 @@
 
     function normalizeStatus(value) {
         var s = String(value || "").toLowerCase();
-        if (s === "ok" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") {
-            return "operational";
-        }
-        if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded") {
-            return "degraded";
-        }
-        if (s === "outage" || s === "down" || s === "fail" || s === "failed") {
-            return "down";
-        }
+        if (s === "ok" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") return "operational";
+        if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded") return "degraded";
+        if (s === "outage" || s === "down" || s === "fail" || s === "failed") return "down";
         return "operational";
     }
 
@@ -54,24 +46,19 @@
         var normalized = normalizeStatus(statusValue);
         el.textContent = statusLabel(normalized);
         el.className = "system-status";
-        if (normalized === "degraded") {
-            el.classList.add("degraded");
-        } else if (normalized === "down") {
-            el.classList.add("down");
-        }
+        if (normalized === "degraded") el.classList.add("degraded");
+        if (normalized === "down") el.classList.add("down");
     }
 
     function applyOverallStatus(statusMap) {
         var keys = ["backend", "frontend", "database", "search", "llm"];
         var hasDown = false;
         var hasDegraded = false;
-
         for (var i = 0; i < keys.length; i += 1) {
             var normalized = normalizeStatus(statusMap[keys[i]]);
             if (normalized === "down") hasDown = true;
             if (normalized === "degraded") hasDegraded = true;
         }
-
         var label = hasDown ? "Major outage" : (hasDegraded ? "System degraded" : "All systems operational");
         text("system-status", label);
 
@@ -81,33 +68,40 @@
         if (!pill || !dot || !systemStatusEl) return;
 
         if (hasDown) {
-            pill.style.background = "rgba(255,79,79,0.08)";
-            pill.style.borderColor = "rgba(255,79,79,0.4)";
-            dot.style.background = "var(--err)";
-            dot.style.boxShadow = "0 0 12px rgba(255,79,79,0.8)";
-            systemStatusEl.style.color = "var(--err)";
+            pill.className = "status-pill down";
+            dot.className = "status-dot down";
+            systemStatusEl.className = "status-text down";
             return;
         }
-
         if (hasDegraded) {
-            pill.style.background = "rgba(245,166,35,0.1)";
-            pill.style.borderColor = "rgba(245,166,35,0.45)";
-            dot.style.background = "var(--warn)";
-            dot.style.boxShadow = "0 0 12px rgba(245,166,35,0.8)";
-            systemStatusEl.style.color = "var(--warn)";
+            pill.className = "status-pill degraded";
+            dot.className = "status-dot degraded";
+            systemStatusEl.className = "status-text degraded";
             return;
         }
-
-        pill.style.background = "rgba(12,179,102,0.08)";
-        pill.style.borderColor = "rgba(61,214,140,0.4)";
-        dot.style.background = "var(--ok)";
-        dot.style.boxShadow = "0 0 12px rgba(61,214,140,0.8)";
-        systemStatusEl.style.color = "var(--ok)";
+        pill.className = "status-pill";
+        dot.className = "status-dot";
+        systemStatusEl.className = "status-text";
     }
 
-    function pickRecentIncident(incidents) {
-        if (!Array.isArray(incidents) || incidents.length === 0) return null;
-        return incidents[0];
+    function pickRecentIncident(events) {
+        if (!Array.isArray(events)) return null;
+        for (var i = 0; i < events.length; i += 1) {
+            if (events[i] && events[i].type === "incident") return events[i];
+        }
+        return null;
+    }
+
+    function mapSystemValues(incident) {
+        var systems = (incident && incident.systems && typeof incident.systems === "object") ? incident.systems : {};
+        var fallback = normalizeStatus(incident && incident.status) === "operational" ? "operational" : "degraded";
+        return {
+            backend: systems.backend || fallback,
+            frontend: systems.frontend || fallback,
+            database: systems.database || fallback,
+            search: systems.search || fallback,
+            llm: systems.llm || fallback
+        };
     }
 
     function updateRecentIncident(incident) {
@@ -125,7 +119,7 @@
 
         var title = incident.title || "Untitled incident";
         var description = incident.impact || incident.description || "No description provided.";
-        var start = incident.start || "Unknown";
+        var start = incident.start || incident.timestamp || "Unknown";
         var end = incident.end || "Ongoing";
         var statusRaw = String(incident.status || "");
         var statusText = statusRaw ? statusRaw.charAt(0).toUpperCase() + statusRaw.slice(1) : "Investigating";
@@ -140,39 +134,147 @@
         if (riStatus) {
             riStatus.className = "incident-status";
             var normalized = normalizeStatus(statusRaw);
-            if (normalized === "degraded") {
-                riStatus.classList.add("investigating");
-            } else if (normalized === "down") {
-                riStatus.classList.add("outage");
-            } else {
-                riStatus.classList.add("resolved");
-            }
+            if (normalized === "degraded") riStatus.classList.add("investigating");
+            else if (normalized === "down") riStatus.classList.add("outage");
+            else riStatus.classList.add("resolved");
         }
     }
 
-    function mapSystemValues(incident) {
-        var systems = (incident && incident.systems && typeof incident.systems === "object") ? incident.systems : {};
-        var fallbackFromIncident = normalizeStatus(incident && incident.status) === "operational" ? "operational" : "degraded";
-        return {
-            backend: systems.backend || fallbackFromIncident,
-            frontend: systems.frontend || fallbackFromIncident,
-            database: systems.database || fallbackFromIncident,
-            search: systems.search || fallbackFromIncident,
-            llm: systems.llm || fallbackFromIncident
-        };
+    function numeric(value) {
+        var n = Number(value);
+        return Number.isFinite(n) ? n : null;
+    }
+
+    function fmtScore(value) {
+        var n = numeric(value);
+        if (n === null) return "TBD";
+        return (n * 100).toFixed(1) + "%";
+    }
+
+    function parseEvidenceObject(evidence) {
+        if (!evidence) return null;
+        if (typeof evidence === "object") return evidence;
+        if (typeof evidence !== "string") return null;
+        try { return JSON.parse(evidence); } catch (_e) { return null; }
+    }
+
+    function renderBenchmarkPanel(events) {
+        var panel = document.getElementById("benchmark-panel");
+        if (!panel) return;
+        var rows = events.filter(function (e) { return e.type === "eval_result"; });
+        if (!rows.length) {
+            panel.innerHTML = '<div class="panel-empty">No eval_result entries yet.</div>';
+            return;
+        }
+        panel.innerHTML = rows.slice(0, 10).map(function (e) {
+            var skia = numeric(e.skiaScore);
+            var baseline = numeric(e.claudeOpus47Baseline != null ? e.claudeOpus47Baseline : e.claudeBaseline);
+            var delta = numeric(e.delta);
+            if (delta === null && skia !== null && baseline !== null) delta = skia - baseline;
+            var up = delta !== null && delta >= 0;
+            var arrow = delta === null ? "•" : (up ? "↑" : "↓");
+            var deltaText = delta === null ? "TBD" : ((delta * 100).toFixed(1) + "pp");
+            var cls = delta === null ? "neutral" : (up ? "up" : "down");
+            return '<div class="panel-row">' +
+                '<span class="panel-key">' + esc(e.suite || "suite") + '</span>' +
+                '<span class="panel-value">SKIA ' + esc(fmtScore(e.skiaScore)) + ' vs Opus ' + esc(fmtScore(baseline)) + '</span>' +
+                '<span class="panel-delta ' + cls + '">' + esc(arrow + " " + deltaText) + '</span>' +
+                '</div>';
+        }).join("");
+    }
+
+    function renderCapabilityPanel(events) {
+        var panel = document.getElementById("capability-panel");
+        if (!panel) return;
+        var rows = events.filter(function (e) { return e.type === "capability_update"; });
+        if (!rows.length) {
+            panel.innerHTML = '<div class="panel-empty">No capability_update entries yet.</div>';
+            return;
+        }
+        panel.innerHTML = rows.slice(0, 10).map(function (e) {
+            var fromState = e.fromState || "stub";
+            var toState = e.toState || "partial";
+            return '<div class="panel-row">' +
+                '<span class="panel-key">' + esc(e.capability || e.title || "capability") + '</span>' +
+                '<span class="panel-value">' + esc(fromState + " → " + toState) + '</span>' +
+                '<span class="panel-meta">' + esc(e.timestamp || "unknown time") + '</span>' +
+                '</div>';
+        }).join("");
+    }
+
+    function renderReasoningPanel(events) {
+        var panel = document.getElementById("reasoning-panel");
+        if (!panel) return;
+        var mode = "unknown";
+        var confidences = [];
+        var effort = { low: 0, medium: 0, high: 0, max: 0 };
+        var candidates = events.filter(function (e) {
+            return e.type === "capability_update" && String(e.capability || "").toLowerCase().indexOf("reason") >= 0;
+        });
+        for (var i = 0; i < candidates.length; i += 1) {
+            var ev = candidates[i];
+            var parsed = parseEvidenceObject(ev.evidence);
+            if (parsed && parsed.mode) mode = String(parsed.mode);
+            if (parsed && numeric(parsed.confidence) !== null) confidences.push(numeric(parsed.confidence));
+            if (parsed && parsed.effortDistribution && typeof parsed.effortDistribution === "object") {
+                effort.low += Number(parsed.effortDistribution.low || 0);
+                effort.medium += Number(parsed.effortDistribution.medium || 0);
+                effort.high += Number(parsed.effortDistribution.high || 0);
+                effort.max += Number(parsed.effortDistribution.max || 0);
+            }
+        }
+        var avg = confidences.length
+            ? (confidences.reduce(function (a, b) { return a + b; }, 0) / confidences.length).toFixed(3)
+            : "n/a";
+        panel.innerHTML =
+            '<div class="panel-row"><span class="panel-key">Mode</span><span class="panel-value">' + esc(mode) + '</span></div>' +
+            '<div class="panel-row"><span class="panel-key">Avg confidence</span><span class="panel-value">' + esc(avg) + '</span></div>' +
+            '<div class="panel-row"><span class="panel-key">Effort distribution</span><span class="panel-value">' +
+            esc("low " + effort.low + " · medium " + effort.medium + " · high " + effort.high + " · max " + effort.max) +
+            '</span></div>';
+    }
+
+    function renderMemoryPanel(events) {
+        var panel = document.getElementById("memory-panel");
+        if (!panel) return;
+        var latest = null;
+        var updates = events.filter(function (e) {
+            return e.type === "capability_update" && String(e.capability || "").toLowerCase().indexOf("memory") >= 0;
+        });
+        if (updates.length) {
+            latest = parseEvidenceObject(updates[0].evidence);
+        }
+        var tiers = latest && latest.tiers ? latest.tiers : {};
+        var working = Number(tiers.working || 0);
+        var episodic = Number(tiers.episodic || 0);
+        var semantic = Number(tiers.semantic || 0);
+        var procedural = Number(tiers.procedural || 0);
+        var lastConsolidation = latest && latest.lastConsolidation ? latest.lastConsolidation : "n/a";
+        var semanticCount = latest && latest.semanticEntryCount != null ? latest.semanticEntryCount : semantic;
+        panel.innerHTML =
+            '<div class="panel-row"><span class="panel-key">Tier sizes</span><span class="panel-value">' +
+            esc("W " + working + " · E " + episodic + " · S " + semantic + " · P " + procedural) +
+            '</span></div>' +
+            '<div class="panel-row"><span class="panel-key">Last consolidation</span><span class="panel-value">' + esc(lastConsolidation) + '</span></div>' +
+            '<div class="panel-row"><span class="panel-key">Semantic entries</span><span class="panel-value">' + esc(String(semanticCount)) + '</span></div>';
+    }
+
+    function renderPanels(events) {
+        renderBenchmarkPanel(events);
+        renderCapabilityPanel(events);
+        renderReasoningPanel(events);
+        renderMemoryPanel(events);
     }
 
     async function refreshStatus() {
         var recentWrapper = document.getElementById("recent-incident");
         if (recentWrapper) recentWrapper.classList.add("loading");
-
         try {
             var response = await fetch("incidents.json?v=" + Date.now(), { cache: "no-store" });
-            if (!response.ok) {
-                throw new Error("HTTP " + response.status);
-            }
+            if (!response.ok) throw new Error("HTTP " + response.status);
             var data = await response.json();
-            var incident = pickRecentIncident(data);
+            var events = Array.isArray(data) ? data : [];
+            var incident = pickRecentIncident(events);
             var systemValues = mapSystemValues(incident);
 
             applySystemStatus("backend-status", systemValues.backend);
@@ -182,11 +284,7 @@
             applySystemStatus("llm-status", systemValues.llm);
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
-
-            var historyLink = document.getElementById("history-link");
-            if (historyLink) {
-                historyLink.setAttribute("href", "incidents.html");
-            }
+            renderPanels(events);
         } catch (error) {
             updateRecentIncident(null);
             text("system-status", "Status unavailable");

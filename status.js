@@ -259,11 +259,40 @@
             '<div class="panel-row"><span class="panel-key">Semantic entries</span><span class="panel-value">' + esc(String(semanticCount)) + '</span></div>';
     }
 
+    function renderIntelligenceDiagnosticsPanel(events) {
+        var panel = document.getElementById("intelligence-diagnostics-panel");
+        if (!panel) return;
+        var rows = events.filter(function (e) { return e.type === "weakness_analysis" || e.type === "strategy_update"; });
+        if (!rows.length) {
+            panel.innerHTML = '<div class="panel-empty">No diagnostics entries yet.</div>';
+            return;
+        }
+        panel.innerHTML = rows.slice(0, 10).map(function (e) {
+            if (e.type === "strategy_update") {
+                return '<div class="panel-row">' +
+                    '<span class="panel-key">' + esc((e.taskType || "unknown") + " strategy update") + '</span>' +
+                    '<span class="panel-value">' + esc(String(e.topStrategyBefore || "n/a") + " → " + String(e.topStrategyAfter || "n/a")) + '</span>' +
+                    '<span class="panel-meta">' + esc("Projected: " + String(e.projectedScoreImprovement != null ? Number(e.projectedScoreImprovement).toFixed(3) : "0.000") + " · Evidence pairs: " + String(e.evidencePairs || 0)) + '</span>' +
+                    '</div>';
+            }
+            var insight = Array.isArray(e.actionableInsights) && e.actionableInsights.length
+                ? e.actionableInsights[0]
+                : "No actionable insight yet";
+            return '<div class="panel-row">' +
+                '<span class="panel-key">' + esc((e.suite || "unknown") + " diagnostics") + '</span>' +
+                '<span class="panel-value">' + esc(e.topPattern || "No top pattern") + '</span>' +
+                '<span class="panel-meta">' + esc("Severity: " + String(e.severityScore != null ? Number(e.severityScore).toFixed(2) : "0.00") + " · Trend: " + String(e.trend || "stable")) + '</span>' +
+                '<span class="panel-meta">' + esc("Insight: " + insight) + '</span>' +
+                '</div>';
+        }).join("");
+    }
+
     function renderPanels(events) {
         renderBenchmarkPanel(events);
         renderCapabilityPanel(events);
         renderReasoningPanel(events);
         renderMemoryPanel(events);
+        renderIntelligenceDiagnosticsPanel(events);
     }
 
     async function refreshStatus() {

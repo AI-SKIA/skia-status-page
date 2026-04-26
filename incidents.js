@@ -77,14 +77,17 @@
 
             var raw = await response.text();
             var data = JSON.parse(raw.replace(/^\uFEFF/, ""));
-            if (!Array.isArray(data) || data.length === 0) {
+            var incidents = Array.isArray(data)
+                ? data.filter(function (row) { return row && row.type === "incident"; })
+                : [];
+            if (incidents.length === 0) {
                 renderEmpty(container, "No incidents have been recorded for this environment.");
                 return;
             }
 
             container.innerHTML = "";
-            for (var i = 0; i < data.length; i += 1) {
-                container.appendChild(buildIncidentItem(data[i], i));
+            for (var i = 0; i < incidents.length; i += 1) {
+                container.appendChild(buildIncidentItem(incidents[i], i));
             }
         } catch (error) {
             renderEmpty(container, "Unable to load incident history at this time.");

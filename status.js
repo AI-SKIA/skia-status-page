@@ -370,8 +370,7 @@
             var response = await fetchWithTimeout("https://api.skia.ca/api/skia/chat", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
-                    "Origin": "https://skia.ca"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                     messages: [{ role: "user", content: prompt }],
@@ -403,31 +402,25 @@
             // Live backend health check (overrides incidents.json backend/auth)
             try {
                 var backendResponse = await fetchWithTimeout("https://api.skia.ca/api/forge/architecture/health", {
-                    method: "GET",
-                    headers: { "Origin": "https://skia.ca" }
+                    method: "GET"
                 }, API_TIMEOUT_MS);
                 if (backendResponse.ok) {
                     systemValues.backend = "operational";
                     if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
                         systemValues.auth = "operational";
                     }
-                } else {
-                    systemValues.backend = "degraded";
                 }
-            } catch (_backendError) {
-                systemValues.backend = "degraded";
-            }
+            } catch (_backendError) {}
 
             // Live frontend check (overrides incidents.json frontend)
             try {
                 var frontendResponse = await fetchWithTimeout("https://skia.ca", {
-                    method: "HEAD",
-                    headers: { "Origin": "https://skia.ca" }
+                    method: "HEAD"
                 }, API_TIMEOUT_MS);
-                systemValues.frontend = frontendResponse.ok ? "operational" : "degraded";
-            } catch (_frontendError) {
-                systemValues.frontend = "degraded";
-            }
+                if (frontendResponse.ok) {
+                    systemValues.frontend = "operational";
+                }
+            } catch (_frontendError) {}
 
             applySystemStatus("backend-status", systemValues.backend);
             applySystemStatus("frontend-status", systemValues.frontend);

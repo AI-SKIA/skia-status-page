@@ -1,13 +1,9 @@
 # Incident Publishing Runbook
 
-## Standard Procedure
+This file is retained as a short pointer.
 
-1. Add or update a typed event in `incidents.json`.
-2. Validate JSON shape and required fields.
-3. Verify rendering in `index.html` and `incidents.html`.
-4. Deploy and confirm cache-refresh behavior.
+The full operational lifecycle runbook is now:
 
-## Priority Rules
+- `docs/STATUS_UPDATE_RUNBOOK.md`
 
-- Put newest incident/event first unless timeline sorting is automated.
-- Keep status transitions explicit (`investigating` -> `resolved`).
+That runbook defines authority, supersession workflow, pruning policy, validation gates, and rollback procedure.

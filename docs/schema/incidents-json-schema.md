@@ -1,22 +1,9 @@
 # incidents.json Schema Contract
 
-## Event Types
+This file is retained as an index entry.
 
-- `incident`
-- `eval_result`
-- `capability_update`
-- `supersession_milestone`
+Canonical schema documentation now lives in:
 
-## Common Fields
+- `docs/INCIDENT_EVENT_SCHEMA.md`
 
-- `id` (string)
-- `type` (enum)
-- `status` (string)
-- `timestamp` or `start`/`end`
-
-## Type-Specific Fields
-
-- `incident`: `title`, `impact`, optional `systems`
-- `eval_result`: `suite`, `skiaScore`, `claudeOpus47Baseline`, `delta`, `timestamp`
-- `capability_update`: `capability`, `fromState`, `toState`, `evidence`, `timestamp`
-- `supersession_milestone`: `dimension`, `skiaMark`, `claudeOpus47Mark`, `evidence`, `timestamp`
+Use that document for required fields, type-specific contracts, supersession rules, and versioning guidance.

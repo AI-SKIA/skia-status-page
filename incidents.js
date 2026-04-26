@@ -75,7 +75,8 @@
                 throw new Error("HTTP " + response.status);
             }
 
-            var data = await response.json();
+            var raw = await response.text();
+            var data = JSON.parse(raw.replace(/^\uFEFF/, ""));
             if (!Array.isArray(data) || data.length === 0) {
                 renderEmpty(container, "No incidents have been recorded for this environment.");
                 return;

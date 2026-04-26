@@ -1,5 +1,7 @@
 (function () {
     var REFRESH_MS = 30000;
+    var API_TIMEOUT_MS = 5000;
+    var INTEL_TIMEOUT_MS = 8000;
 
     function text(id, value) {
         var el = document.getElementById(id);
@@ -102,6 +104,21 @@
             search: systems.search || fallback,
             llm: systems.llm || fallback
         };
+    }
+
+    function fetchWithTimeout(url, options, timeoutMs) {
+        var controller = new AbortController();
+        var timer = setTimeout(function () { controller.abort(); }, timeoutMs);
+        var opts = options || {};
+        return fetch(url, {
+            method: opts.method || "GET",
+            headers: opts.headers || {},
+            body: opts.body,
+            cache: opts.cache,
+            signal: controller.signal
+        }).finally(function () {
+            clearTimeout(timer);
+        });
     }
 
     function updateRecentIncident(incident) {
@@ -295,16 +312,122 @@
         renderIntelligenceDiagnosticsPanel(events);
     }
 
+    async function readIntelligenceResponse(response) {
+        var contentType = String(response.headers.get("content-type") || "").toLowerCase();
+        if (contentType.indexOf("text/event-stream") !== -1 && response.body) {
+            var reader = response.body.getReader();
+            var decoder = new TextDecoder("utf-8");
+            var buffer = "";
+            var assembled = "";
+            while (true) {
+                var chunk = await reader.read();
+                if (chunk.done) break;
+                buffer += decoder.decode(chunk.value, { stream: true });
+                var frames = buffer.split("\n\n");
+                buffer = frames.pop() || "";
+                for (var i = 0; i < frames.length; i += 1) {
+                    var lines = frames[i].split("\n");
+                    for (var j = 0; j < lines.length; j += 1) {
+                        var line = lines[j];
+                        if (line.indexOf("data: ") !== 0) continue;
+                        var payload = line.slice(6).trim();
+                        if (!payload || payload === "[DONE]") continue;
+                        try {
+                            var parsed = JSON.parse(payload);
+                            if (typeof parsed.response === "string") assembled += parsed.response;
+                            else if (typeof parsed.content === "string") assembled += parsed.content;
+                            else if (typeof parsed.message === "string") assembled += parsed.message;
+                            else if (typeof parsed.delta === "string") assembled += parsed.delta;
+                            else assembled += payload;
+                        } catch (_e) {
+                            assembled += payload;
+                        }
+                    }
+                }
+            }
+            return assembled.trim();
+        }
+        var json = await response.json();
+        if (typeof json.response === "string") return json.response;
+        if (typeof json.content === "string") return json.content;
+        if (typeof json.message === "string") return json.message;
+        return "";
+    }
+
+    async function renderIntelligenceReport(events) {
+        var panel = document.getElementById("intelligence-report-panel");
+        if (!panel) return;
+        var candidates = events.filter(function (e) {
+            if (!e || (e.type !== "incident" && e.type !== "supersession_milestone" && e.type !== "eval_result")) {
+                return false;
+            }
+            return String(e.status || "").toLowerCase() !== "superseded";
+        }).slice(0, 5);
+        var prompt = "You are SKIA. Summarize the current health and capability status of the SKIA ecosystem in 2-3 sentences based on this data: " +
+            JSON.stringify(candidates) +
+            " Be concise and sovereign.";
+        try {
+            var response = await fetchWithTimeout("https://api.skia.ca/api/skia/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Origin": "https://skia.ca"
+                },
+                body: JSON.stringify({
+                    messages: [{ role: "user", content: prompt }],
+                    is_guest: true
+                })
+            }, INTEL_TIMEOUT_MS);
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            var report = await readIntelligenceResponse(response);
+            panel.className = "incident-body";
+            panel.textContent = report || "SKIA intelligence unavailable";
+        } catch (_error) {
+            panel.className = "panel-empty";
+            panel.textContent = "SKIA intelligence unavailable";
+        }
+    }
+
     async function refreshStatus() {
         var recentWrapper = document.getElementById("recent-incident");
         if (recentWrapper) recentWrapper.classList.add("loading");
         try {
             var response = await fetch("incidents.json?v=" + Date.now(), { cache: "no-store" });
             if (!response.ok) throw new Error("HTTP " + response.status);
-            var data = await response.json();
+            var raw = await response.text();
+            var data = JSON.parse(raw.replace(/^\uFEFF/, ""));
             var events = Array.isArray(data) ? data : [];
             var incident = pickRecentIncident(events);
             var systemValues = mapSystemValues(incident);
+
+            // Live backend health check (overrides incidents.json backend/auth)
+            try {
+                var backendResponse = await fetchWithTimeout("https://api.skia.ca/api/forge/architecture/health", {
+                    method: "GET",
+                    headers: { "Origin": "https://skia.ca" }
+                }, API_TIMEOUT_MS);
+                if (backendResponse.ok) {
+                    systemValues.backend = "operational";
+                    if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
+                        systemValues.auth = "operational";
+                    }
+                } else {
+                    systemValues.backend = "degraded";
+                }
+            } catch (_backendError) {
+                systemValues.backend = "degraded";
+            }
+
+            // Live frontend check (overrides incidents.json frontend)
+            try {
+                var frontendResponse = await fetchWithTimeout("https://skia.ca", {
+                    method: "HEAD",
+                    headers: { "Origin": "https://skia.ca" }
+                }, API_TIMEOUT_MS);
+                systemValues.frontend = frontendResponse.ok ? "operational" : "degraded";
+            } catch (_frontendError) {
+                systemValues.frontend = "degraded";
+            }
 
             applySystemStatus("backend-status", systemValues.backend);
             applySystemStatus("frontend-status", systemValues.frontend);
@@ -314,6 +437,7 @@
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
             renderPanels(events);
+            await renderIntelligenceReport(events);
         } catch (error) {
             updateRecentIncident(null);
             text("system-status", "Status unavailable");
@@ -322,6 +446,11 @@
             text("database-status", "Unknown");
             text("search-status", "Unknown");
             text("llm-status", "Unknown");
+            var intelligencePanel = document.getElementById("intelligence-report-panel");
+            if (intelligencePanel) {
+                intelligencePanel.className = "panel-empty";
+                intelligencePanel.textContent = "SKIA intelligence unavailable";
+            }
         } finally {
             text("last-updated", toUtcNow());
             if (recentWrapper) recentWrapper.classList.remove("loading");

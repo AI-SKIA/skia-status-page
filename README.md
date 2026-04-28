@@ -2,6 +2,12 @@
 
 This repository serves the public SKIA status experience as a static site on Nginx.
 
+## Ecosystem Role
+
+- `Skia-FULL` provides core product runtime and APIs.
+- `SKIA-Forge` provides orchestration, governance, and control-plane intelligence.
+- `Skia-Status` publishes externally visible health, incidents, and capability updates.
+
 ## Runtime Files
 
 - `index.html` (overview dashboard)

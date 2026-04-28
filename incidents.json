@@ -5495,5 +5495,95 @@
     "evidencePairs": 1,
     "timestamp": "2026-04-26T09:11:23.002Z",
     "status": "active"
+  },
+  {
+    "id": "eval-reasoning-1777297480501",
+    "type": "eval_result",
+    "suite": "reasoning",
+    "skiaScore": 1,
+    "claudeOpus47Baseline": null,
+    "delta": null,
+    "timestamp": "2026-04-27T13:44:40.498Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.490Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.496Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.501Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.507Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.513Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.517Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.522Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-04-27T13:44:45.528Z",
+    "status": "active"
   }
 ]

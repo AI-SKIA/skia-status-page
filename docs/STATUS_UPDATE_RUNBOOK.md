@@ -6,6 +6,14 @@ This runbook defines the operational workflow for publishing, superseding, and p
 
 It is the lifecycle companion to `docs/INCIDENT_EVENT_SCHEMA.md`.
 
+## Ecosystem purpose
+
+Use this runbook to communicate externally visible operational truth for SKIA:
+
+- Product/runtime context comes from `Skia-FULL`.
+- Orchestration/governance context may come from `SKIA-Forge`.
+- Only validated, publishable events should be emitted through `Skia-Status`.
+
 ## Authority and ownership
 
 - **Primary owner:** Platform operations owner for SKIA status publishing.

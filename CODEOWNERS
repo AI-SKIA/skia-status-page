@@ -1,0 +1,11 @@
+# Default ownership
+* @danyf
+
+# Docs and runbooks
+/docs/ @danyf
+
+# Runtime status assets
+/index.html @danyf
+/status.js @danyf
+/incidents.js @danyf
+/incidents.json @danyf

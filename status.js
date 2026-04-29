@@ -33,12 +33,13 @@
         if (s === "ok" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") return "operational";
         if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded") return "degraded";
         if (s === "outage" || s === "down" || s === "fail" || s === "failed") return "down";
-        return "operational";
+        return "unknown";
     }
 
     function statusLabel(value) {
         if (value === "down") return "Down";
         if (value === "degraded") return "Degraded";
+        if (value === "unknown") return "Unknown";
         return "Operational";
     }
 
@@ -56,12 +57,14 @@
         var keys = ["backend", "frontend", "database", "search", "llm"];
         var hasDown = false;
         var hasDegraded = false;
+        var hasUnknown = false;
         for (var i = 0; i < keys.length; i += 1) {
             var normalized = normalizeStatus(statusMap[keys[i]]);
             if (normalized === "down") hasDown = true;
             if (normalized === "degraded") hasDegraded = true;
+            if (normalized === "unknown") hasUnknown = true;
         }
-        var label = hasDown ? "Major outage" : (hasDegraded ? "System degraded" : "All systems operational");
+        var label = hasDown ? "Major outage" : (hasDegraded ? "System degraded" : (hasUnknown ? "Status partially unknown" : "All systems operational"));
         text("system-status", label);
 
         var pill = document.querySelector(".status-pill");
@@ -76,6 +79,12 @@
             return;
         }
         if (hasDegraded) {
+            pill.className = "status-pill degraded";
+            dot.className = "status-dot degraded";
+            systemStatusEl.className = "status-text degraded";
+            return;
+        }
+        if (hasUnknown) {
             pill.className = "status-pill degraded";
             dot.className = "status-dot degraded";
             systemStatusEl.className = "status-text degraded";
@@ -96,7 +105,8 @@
 
     function mapSystemValues(incident) {
         var systems = (incident && incident.systems && typeof incident.systems === "object") ? incident.systems : {};
-        var fallback = normalizeStatus(incident && incident.status) === "operational" ? "operational" : "degraded";
+        var incidentStatus = normalizeStatus(incident && incident.status);
+        var fallback = incidentStatus === "operational" ? "operational" : (incidentStatus === "unknown" ? "unknown" : "degraded");
         return {
             backend: systems.backend || fallback,
             frontend: systems.frontend || fallback,
@@ -178,12 +188,27 @@
     function renderBenchmarkPanel(events) {
         var panel = document.getElementById("benchmark-panel");
         if (!panel) return;
-        var rows = events.filter(function (e) { return e.type === "eval_result"; });
+        var rows = events.filter(function (e) {
+            if (!e || e.type !== "eval_result") return false;
+            if (String(e.status || "").toLowerCase() === "superseded") return false;
+            return e.providerBacked === true;
+        });
+        if (!rows.length) {
+            rows = events.filter(function (e) {
+                return e && e.type === "eval_result" && String(e.status || "").toLowerCase() !== "superseded";
+            });
+        }
         if (!rows.length) {
             panel.innerHTML = '<div class="panel-empty">No eval_result entries yet.</div>';
             return;
         }
-        panel.innerHTML = rows.slice(0, 10).map(function (e) {
+        var bySuite = {};
+        for (var i = 0; i < rows.length; i += 1) {
+            var suite = String(rows[i].suite || "suite");
+            if (!Object.prototype.hasOwnProperty.call(bySuite, suite)) bySuite[suite] = rows[i];
+        }
+        var canonicalRows = Object.keys(bySuite).slice(0, 10).map(function (suiteKey) { return bySuite[suiteKey]; });
+        panel.innerHTML = canonicalRows.map(function (e) {
             var skia = numeric(e.skiaScore);
             var baseline = numeric(e.claudeOpus47Baseline != null ? e.claudeOpus47Baseline : e.claudeBaseline);
             var delta = numeric(e.delta);
@@ -367,7 +392,7 @@
             JSON.stringify(candidates) +
             " Be concise and sovereign.";
         try {
-            var response = await fetchWithTimeout("https://api.skia.ca/api/skia/chat", {
+            var response = await fetchWithTimeout("/api/skia/chat", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -399,9 +424,9 @@
             var incident = pickRecentIncident(events);
             var systemValues = mapSystemValues(incident);
 
-            // Live backend health check (overrides incidents.json backend/auth)
+            // Live backend health check through same-origin proxy.
             try {
-                var backendResponse = await fetchWithTimeout("https://api.skia.ca/api/forge/architecture/health", {
+                var backendResponse = await fetchWithTimeout("/api/forge/architecture/health", {
                     method: "GET"
                 }, API_TIMEOUT_MS);
                 if (backendResponse.ok) {
@@ -409,18 +434,12 @@
                     if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
                         systemValues.auth = "operational";
                     }
+                } else {
+                    systemValues.backend = "down";
                 }
-            } catch (_backendError) {}
-
-            // Live frontend check (overrides incidents.json frontend)
-            try {
-                var frontendResponse = await fetchWithTimeout("https://skia.ca", {
-                    method: "HEAD"
-                }, API_TIMEOUT_MS);
-                if (frontendResponse.ok) {
-                    systemValues.frontend = "operational";
-                }
-            } catch (_frontendError) {}
+            } catch (_backendError) {
+                systemValues.backend = "unknown";
+            }
 
             applySystemStatus("backend-status", systemValues.backend);
             applySystemStatus("frontend-status", systemValues.frontend);

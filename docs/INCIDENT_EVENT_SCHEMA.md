@@ -19,6 +19,7 @@ It supersedes minimal schema notes in `docs/schema/incidents-json-schema.md` and
 - `capability_update`
 - `supersession_milestone`
 - `weakness_analysis`
+- `strategy_update`
 
 ## Common fields
 
@@ -144,6 +145,22 @@ Optional:
 - `topPattern` (string)
 - `recommendedStrategy` (string)
 - `estimatedScoreGain` (number)
+
+### `strategy_update`
+
+Required:
+
+- `type = "strategy_update"`
+- `taskType` (string)
+- `timestamp` (string)
+- `status` (string)
+
+Optional:
+
+- `topStrategyBefore` (string)
+- `topStrategyAfter` (string)
+- `projectedScoreImprovement` (number)
+- `evidencePairs` (number)
 
 ## Producer/consumer contract
 

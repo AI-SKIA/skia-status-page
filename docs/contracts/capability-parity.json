@@ -1,0 +1,14 @@
+{
+  "surface": "skia-status",
+  "version": "1.0.0",
+  "capabilities": [
+    "identity",
+    "auth",
+    "health-monitoring",
+    "incident-intelligence",
+    "brand-context",
+    "output-standards",
+    "api-access",
+    "governance"
+  ]
+}

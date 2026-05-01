@@ -80,6 +80,27 @@
             var incidents = Array.isArray(data)
                 ? data.filter(function (row) { return row && row.type === "incident"; })
                 : [];
+            function incidentRecency(row) {
+                var keys = ["lastChecked", "timestamp", "start", "end"];
+                var max = 0;
+                for (var i = 0; i < keys.length; i++) {
+                    var v = row[keys[i]];
+                    if (v == null) continue;
+                    var s = String(v).trim();
+                    var t = Date.parse(s);
+                    if (!isNaN(t) && t > max) max = t;
+                    var m = s.match(/^(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})(?::(\d{2}))?\s*UTC$/i);
+                    if (m) {
+                        var parts = m[2].split(":");
+                        var h = parts[0].length < 2 ? "0" + parts[0] : parts[0];
+                        var iso = m[1] + "T" + h + ":" + parts[1] + (m[3] ? ":" + m[3] : ":00") + ".000Z";
+                        t = Date.parse(iso);
+                        if (!isNaN(t) && t > max) max = t;
+                    }
+                }
+                return max;
+            }
+            incidents.sort(function (a, b) { return incidentRecency(b) - incidentRecency(a); });
             if (incidents.length === 0) {
                 renderEmpty(container, "No incidents have been recorded for this environment.");
                 return;

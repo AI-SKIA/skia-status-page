@@ -1,0 +1,56 @@
+# Fetches incidents.json from the backend ledger export and commits when changed.
+# Triggers Northflank CD on push if your NF project rebuilds skia-status-page from this repo.
+#
+# Required GitHub repo secrets:
+#   INCIDENTS_LEDGER_FETCH_URL — full URL, e.g. https://<backend-public-host>/api/system/incidents-ledger
+#   INCIDENTS_LEDGER_FETCH_TOKEN — must match backend INCIDENTS_LEDGER_FETCH_TOKEN
+#
+# Backend must set INCIDENTS_LEDGER_FETCH_TOKEN and expose the route on the deployment CI calls (usually backend service URL, not login-only).
+
+name: Sync incidents ledger
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+concurrency:
+  group: sync-incidents-ledger
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fetch ledger from backend
+        env:
+          URL: ${{ secrets.INCIDENTS_LEDGER_FETCH_URL }}
+          TOKEN: ${{ secrets.INCIDENTS_LEDGER_FETCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "${URL:-}" ] || [ -z "${TOKEN:-}" ]; then
+            echo "INCIDENTS_LEDGER_FETCH_URL and INCIDENTS_LEDGER_FETCH_TOKEN secrets must be set."
+            exit 1
+          fi
+          curl -fsSL -H "Authorization: Bearer ${TOKEN}" "${URL}" -o incidents.json.new
+          jq empty incidents.json.new
+          mv incidents.json.new incidents.json
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add incidents.json
+          if git diff --staged --quiet; then
+            echo "No changes to incidents.json"
+            exit 0
+          fi
+          git commit -m "chore(status): sync incidents.json from backend ledger"
+          git push

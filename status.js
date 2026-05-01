@@ -67,6 +67,15 @@
         var label = hasDown ? "Major outage" : (hasDegraded ? "System degraded" : (hasUnknown ? "Status partially unknown" : "All systems operational"));
         text("system-status", label);
 
+        var heroSub = hasDown
+            ? "One or more critical systems failed live health checks. See Core systems for details."
+            : hasDegraded
+                ? "Some components are degraded or operating with reduced capacity."
+                : hasUnknown
+                    ? "Some checks did not complete; status may be incomplete until probes recover."
+                    : "All systems are operating within normal parameters.";
+        text("hero-sub-text", heroSub);
+
         var pill = document.querySelector(".status-pill");
         var dot = document.querySelector(".status-dot");
         var systemStatusEl = document.getElementById("system-status");
@@ -95,12 +104,42 @@
         systemStatusEl.className = "status-text";
     }
 
+    function parseIncidentRecencyMs(row) {
+        if (!row || typeof row !== "object") return 0;
+        var keys = ["lastChecked", "timestamp", "start", "end"];
+        var max = 0;
+        for (var i = 0; i < keys.length; i++) {
+            var v = row[keys[i]];
+            if (v == null) continue;
+            var s = String(v).trim();
+            var t = Date.parse(s);
+            if (!isNaN(t) && t > max) max = t;
+            var m = s.match(/^(\d{4}-\d{2}-\d{2})\s+(\d{1,2}:\d{2})(?::(\d{2}))?\s*UTC$/i);
+            if (m) {
+                var parts = m[2].split(":");
+                var h = parts[0].length < 2 ? "0" + parts[0] : parts[0];
+                var iso = m[1] + "T" + h + ":" + parts[1] + (m[3] ? ":" + m[3] : ":00") + ".000Z";
+                t = Date.parse(iso);
+                if (!isNaN(t) && t > max) max = t;
+            }
+        }
+        return max;
+    }
+
     function pickRecentIncident(events) {
         if (!Array.isArray(events)) return null;
+        var best = null;
+        var bestT = -1;
         for (var i = 0; i < events.length; i += 1) {
-            if (events[i] && events[i].type === "incident") return events[i];
+            var e = events[i];
+            if (!e || e.type !== "incident") continue;
+            var t = parseIncidentRecencyMs(e);
+            if (t >= bestT) {
+                bestT = t;
+                best = e;
+            }
         }
-        return null;
+        return best;
     }
 
     function mapSystemValues(incident) {
@@ -453,6 +492,7 @@
         } catch (error) {
             updateRecentIncident(null);
             text("system-status", "Status unavailable");
+            text("hero-sub-text", "Unable to load live status data. Refresh the page or try again shortly.");
             text("backend-status", "Unknown");
             text("frontend-status", "Unknown");
             text("database-status", "Unknown");

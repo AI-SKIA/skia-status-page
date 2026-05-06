@@ -1,14 +1,17 @@
-|   incidents.json
-|   index.html
+﻿|   index.html
+|   LICENSE
 |   nginx.conf
 |   README.md
+|   SECURITY.md
 |   status.js
 |   
++---.github
+|   \---workflows
+|           sync-incidents-ledger.yml
+|           
 +---.vs
 |   |   slnx.sqlite
 |   |   VSWorkspaceState.json
 |   |   
 |   \---Skia-Status.slnx
 |       +---FileContentIndex
-|       |       36353676-4506-42db-8343-1a2818a21e3c.vsidx
-|       |       

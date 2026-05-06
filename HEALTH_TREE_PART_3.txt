@@ -1,3 +1,5 @@
+﻿|       |       36353676-4506-42db-8343-1a2818a21e3c.vsidx
+|       |       
 |       \---v18
 |               DocumentLayout.json
 |               
@@ -11,4 +13,5 @@
     +---changelog
     |       status-site-changelog.md
     |       
-    +---governance
+    +---contracts
+    |       capability-parity.json

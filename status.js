@@ -54,7 +54,7 @@
     }
 
     function applyOverallStatus(statusMap) {
-        var keys = ["backend", "frontend", "database", "search", "llm"];
+        var keys = ["backend", "frontend", "database", "search", "llm", "epaas"];
         var hasDown = false;
         var hasDegraded = false;
         var hasUnknown = false;
@@ -151,7 +151,8 @@
             frontend: systems.frontend || fallback,
             database: systems.database || fallback,
             search: systems.search || fallback,
-            llm: systems.llm || fallback
+            llm: systems.llm || fallback,
+            epaas: systems.epaas || fallback
         };
     }
 
@@ -485,6 +486,7 @@
             applySystemStatus("database-status", systemValues.database);
             applySystemStatus("search-status", systemValues.search);
             applySystemStatus("llm-status", systemValues.llm);
+            applySystemStatus("epaas-status", systemValues.epaas);
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
             renderPanels(events);
@@ -498,6 +500,7 @@
             text("database-status", "Unknown");
             text("search-status", "Unknown");
             text("llm-status", "Unknown");
+            text("epaas-status", "Unknown");
             var intelligencePanel = document.getElementById("intelligence-report-panel");
             if (intelligencePanel) {
                 intelligencePanel.className = "panel-empty";

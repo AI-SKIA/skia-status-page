@@ -126,6 +126,36 @@
         return max;
     }
 
+    function updateDataFreshnessBadge(events) {
+        var badge = document.getElementById("data-freshness");
+        if (!badge) return;
+        var latest = 0;
+        if (Array.isArray(events)) {
+            for (var i = 0; i < events.length; i += 1) {
+                var t = parseIncidentRecencyMs(events[i]);
+                if (t > latest) latest = t;
+            }
+        }
+        badge.className = "meta-badge";
+        if (latest <= 0) {
+            badge.textContent = "Unknown";
+            badge.classList.add("stale");
+            return;
+        }
+        var ageMs = Date.now() - latest;
+        if (ageMs > 20 * 60 * 1000) {
+            badge.textContent = "Stale";
+            badge.classList.add("stale");
+            return;
+        }
+        if (ageMs > 10 * 60 * 1000) {
+            badge.textContent = "Aging";
+            badge.classList.add("aging");
+            return;
+        }
+        badge.textContent = "Fresh";
+    }
+
     function pickRecentIncident(events) {
         if (!Array.isArray(events)) return null;
         var bestOpen = null;
@@ -505,6 +535,7 @@
             var raw = await response.text();
             var data = JSON.parse(raw.replace(/^\uFEFF/, ""));
             var events = Array.isArray(data) ? data : [];
+            updateDataFreshnessBadge(events);
             var incident = pickRecentIncident(events);
             var systemValues = mapSystemValues(incident);
 
@@ -534,6 +565,11 @@
             renderPanels(events);
             await renderIntelligenceReport(events);
         } catch (error) {
+            var freshnessBadge = document.getElementById("data-freshness");
+            if (freshnessBadge) {
+                freshnessBadge.className = "meta-badge stale";
+                freshnessBadge.textContent = "Unknown";
+            }
             updateRecentIncident(null);
             text("system-status", "Status unavailable");
             text("hero-sub-text", "Unable to load live status data. Refresh the page or try again shortly.");

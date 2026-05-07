@@ -39,7 +39,16 @@ jobs:
             echo "INCIDENTS_LEDGER_FETCH_URL and INCIDENTS_LEDGER_FETCH_TOKEN secrets must be set."
             exit 1
           fi
-          curl -fsSL -H "Authorization: Bearer ${TOKEN}" "${URL}" -o incidents.json.new
+          for attempt in 1 2 3; do
+            if curl -fsSL --connect-timeout 10 --max-time 30 --retry 0 -H "Authorization: Bearer ${TOKEN}" "${URL}" -o incidents.json.new; then
+              break
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Ledger fetch failed after ${attempt} attempts."
+              exit 1
+            fi
+            sleep $((attempt * 5))
+          done
           jq empty incidents.json.new
           mv incidents.json.new incidents.json
 

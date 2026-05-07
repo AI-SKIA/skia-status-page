@@ -128,18 +128,25 @@
 
     function pickRecentIncident(events) {
         if (!Array.isArray(events)) return null;
+        var bestOpen = null;
+        var bestOpenT = -1;
         var best = null;
         var bestT = -1;
         for (var i = 0; i < events.length; i += 1) {
             var e = events[i];
             if (!e || e.type !== "incident") continue;
             var t = parseIncidentRecencyMs(e);
+            var isOpen = !e.end && normalizeStatus(e.status) !== "operational";
+            if (isOpen && t >= bestOpenT) {
+                bestOpenT = t;
+                bestOpen = e;
+            }
             if (t >= bestT) {
                 bestT = t;
                 best = e;
             }
         }
-        return best;
+        return bestOpen || best;
     }
 
     function mapSystemValues(incident) {
@@ -169,6 +176,43 @@
         }).finally(function () {
             clearTimeout(timer);
         });
+    }
+
+    async function fetchLiveHealthSummary() {
+        var summary = {
+            backend: "unknown",
+            database: "unknown",
+            llm: "unknown"
+        };
+        try {
+            var backendRes = await fetchWithTimeout("/api/health", { method: "GET" }, API_TIMEOUT_MS);
+            if (backendRes.ok) {
+                var backendJson = await backendRes.json();
+                summary.backend = normalizeStatus(backendJson && backendJson.overall ? backendJson.overall : backendJson && backendJson.status);
+                if (backendJson && backendJson.database && backendJson.database.status) {
+                    summary.database = normalizeStatus(backendJson.database.status);
+                }
+                if (backendJson && backendJson.llm && backendJson.llm.status) {
+                    summary.llm = normalizeStatus(backendJson.llm.status);
+                }
+            } else {
+                summary.backend = "down";
+            }
+        } catch (_e) {
+            summary.backend = "unknown";
+        }
+        try {
+            var dbRes = await fetchWithTimeout("/api/health/database", { method: "GET" }, API_TIMEOUT_MS);
+            if (dbRes.ok) {
+                var dbJson = await dbRes.json();
+                summary.database = normalizeStatus(dbJson && dbJson.status);
+            } else {
+                summary.database = "down";
+            }
+        } catch (_e2) {
+            // Keep value from /api/health fallback.
+        }
+        return summary;
     }
 
     function updateRecentIncident(incident) {
@@ -464,21 +508,19 @@
             var incident = pickRecentIncident(events);
             var systemValues = mapSystemValues(incident);
 
-            // Live backend health check through same-origin proxy.
-            try {
-                var backendResponse = await fetchWithTimeout("/api/forge/architecture/health", {
-                    method: "GET"
-                }, API_TIMEOUT_MS);
-                if (backendResponse.ok) {
-                    systemValues.backend = "operational";
-                    if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
-                        systemValues.auth = "operational";
-                    }
-                } else {
-                    systemValues.backend = "down";
+            // Live backend health checks through same-origin proxy and override stale ledger values.
+            var liveSummary = await fetchLiveHealthSummary();
+            if (liveSummary.backend !== "unknown") {
+                systemValues.backend = liveSummary.backend;
+                if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
+                    systemValues.auth = liveSummary.backend;
                 }
-            } catch (_backendError) {
-                systemValues.backend = "unknown";
+            }
+            if (liveSummary.database !== "unknown") {
+                systemValues.database = liveSummary.database;
+            }
+            if (liveSummary.llm !== "unknown") {
+                systemValues.llm = liveSummary.llm;
             }
 
             applySystemStatus("backend-status", systemValues.backend);

@@ -1,0 +1,33 @@
+name: Status CI
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate incidents JSON syntax
+        run: jq empty incidents.json
+
+      - name: Validate incidents schema basics
+        run: |
+          set -euo pipefail
+          jq -e '
+            type == "array" and
+            (all(.[]; has("type"))) and
+            (all(.[]; .type == "incident" or .type == "capability_update" or .type == "eval_result" or .type == "strategy_update" or .type == "weakness_analysis" or .type == "supersession_milestone"))
+          ' incidents.json > /dev/null
+
+      - name: Verify static assets exist
+        run: |
+          test -f index.html
+          test -f status.js
+          test -f incidents.js
+          test -f nginx.conf

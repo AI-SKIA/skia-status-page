@@ -35,5 +35,6325 @@
     "start": "2026-04-19 03:45 UTC",
     "end": "2026-04-19 04:00 UTC",
     "impact": "Successfully synchronized SearXNG live search with the SKIA core intelligence engine. All systems reporting 2026 live data."
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.269Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.296Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.320Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.357Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.386Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.414Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.448Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-09T15:16:20.469Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.725Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.755Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.799Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.846Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.892Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.926Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:51.972Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:49:52.014Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.457Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.465Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.474Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.487Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.503Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.515Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.530Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:52:54.543Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.912Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.926Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.937Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.950Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.967Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.981Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:05.997Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-11T02:54:06.011Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.709Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.725Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.741Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.755Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.767Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.786Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.808Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:18:33.826Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.339Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.359Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.377Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.401Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.424Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.468Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.502Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:29:04.551Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.220Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.248Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.281Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.307Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.342Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.382Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.406Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T01:35:15.447Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.267Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.297Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.317Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.335Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.363Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.390Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.422Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:01:41.443Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.259Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.289Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.310Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.336Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.374Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.409Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.434Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:08:40.461Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.099Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.127Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.154Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.190Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.261Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.286Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.327Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:09:10.350Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:44.844Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:44.875Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:44.912Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:44.948Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:44.982Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:45.047Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:45.092Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:10:45.136Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.132Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.162Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.197Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.237Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.281Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.322Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.367Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:02.417Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.592Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.661Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.706Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.751Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.814Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.854Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.892Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:24:58.924Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:17.902Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:17.953Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:17.992Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:18.021Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:18.055Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:18.080Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:18.123Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:54:18.144Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.525Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.554Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.573Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.604Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.628Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.671Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.725Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T02:55:35.760Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.271Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.291Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.311Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.335Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.358Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.377Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.401Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:08:39.422Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.836Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.868Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.887Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.914Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.938Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.953Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:39.973Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:26:40.000Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.683Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.706Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.722Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.747Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.765Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.785Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.814Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:29:54.849Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:05.950Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.006Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.065Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.104Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.136Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.186Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.239Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T03:31:06.289Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.115Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.139Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.184Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.251Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.332Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.397Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.469Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:00:20.576Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:14.867Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:14.902Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:14.926Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:14.953Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:14.977Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:15.008Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:15.039Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:01:15.073Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:13.930Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:13.955Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:13.984Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:14.010Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:14.030Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:14.050Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:14.067Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:38:14.095Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.468Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.515Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.567Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.622Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.682Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.746Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.800Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T05:39:13.905Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.842Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.864Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.888Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.922Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.943Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:56.975Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:57.008Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:17:57.029Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.056Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.110Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.153Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.220Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.256Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.340Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.443Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:24:20.505Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.135Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.187Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.225Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.349Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.437Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.601Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.753Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:26:59.826Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.725Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.748Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.770Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.815Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.858Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.921Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:15.956Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:50:16.002Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.532Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.549Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.564Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.589Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.606Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.622Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.649Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:54:39.684Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.793Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.823Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.846Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.869Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.892Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.918Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.939Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T06:55:29.962Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.360Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.426Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.533Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.676Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.751Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.820Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.859Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:07:57.901Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.603Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.628Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.656Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.692Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.728Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.748Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.771Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:13:23.795Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:17.742Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:17.807Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:17.877Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:17.956Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:17.994Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:18.017Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:18.062Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:14:18.129Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.703Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.720Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.744Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.772Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.795Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.815Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.842Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:15:46.880Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.662Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.710Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.736Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.754Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.776Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.790Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.808Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:16:53.845Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:23.970Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.008Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.056Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.092Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.180Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.259Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.297Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:18:24.318Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:38.927Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:38.958Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:38.985Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:39.009Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:39.037Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:39.059Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:39.095Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:19:39.112Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:39.962Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.013Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.060Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.116Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.165Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.212Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.263Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:23:40.315Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.049Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.091Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.116Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.149Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.170Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.215Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.250Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:29:06.295Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:28.828Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:28.883Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:28.960Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:29.012Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:29.056Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:29.089Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:29.124Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:31:29.150Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.377Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.454Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.507Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.541Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.565Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.625Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.659Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:33:08.767Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:13.965Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.046Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.126Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.198Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.248Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.338Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.424Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:36:14.509Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.375Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.424Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.477Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.524Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.579Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.627Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.686Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:51:59.738Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.095Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.172Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.203Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.237Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.272Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.296Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.378Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T07:55:54.434Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:21.992Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.083Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.147Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.223Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.271Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.337Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.386Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:14:22.460Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.180Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.234Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.280Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.311Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.375Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.411Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.483Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:17:18.552Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.278Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.405Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.502Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.602Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.729Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.824Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.893Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:30:01.957Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:33.938Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.006Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.086Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.162Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.217Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.278Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.329Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:32:34.384Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.051Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.103Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.170Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.239Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.295Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.344Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.390Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:38:21.430Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:02.813Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:02.860Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:02.909Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:02.971Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:03.036Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:03.109Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:03.150Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:40:03.226Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.318Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.383Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.428Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.464Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.493Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.518Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.551Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T08:57:22.597Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.432Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.479Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.524Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.601Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.655Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.701Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.749Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:06:57.798Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:10.817Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:10.875Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:10.960Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:11.038Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:11.125Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:11.224Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:11.301Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T09:08:11.404Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.214Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.283Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.319Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.380Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.436Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.500Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.615Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:22:15.694Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.252Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.306Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.373Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.452Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.541Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.600Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.658Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:23:23.740Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.007Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.047Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.095Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.146Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.208Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.270Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.315Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T10:50:54.401Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.198Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.261Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.314Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.362Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.406Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.453Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.493Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:06:54.537Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.333Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.393Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.443Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.477Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.506Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.566Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.635Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:16:32.706Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.035Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.064Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.093Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.125Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.152Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.191Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.224Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:26:57.256Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.526Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.595Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.668Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.758Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.856Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:00.940Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:01.019Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T11:59:01.122Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.597Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.652Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.687Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.715Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.744Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.798Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.844Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-14T14:01:21.896Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:45.774Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:45.820Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:45.861Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:45.902Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:45.946Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:46.003Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:46.048Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:38:46.095Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.592Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.635Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.684Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.725Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.809Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.849Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.909Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:44:44.952Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.497Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.576Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.608Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.661Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.692Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.752Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.794Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:45:30.819Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:34.683Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:34.768Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:34.932Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:35.064Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:35.099Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:35.176Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:35.316Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:46:35.363Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.064Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.101Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.142Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.183Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.213Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.245Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.297Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:50:33.329Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:26.905Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:26.957Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.004Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.058Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.109Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.142Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.182Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T19:58:27.230Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:54.922Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:54.985Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.045Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.138Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.228Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.345Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.496Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T20:05:55.580Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.582Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.606Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.634Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.677Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.729Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.791Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.836Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T21:22:39.881Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.207Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.258Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.330Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.394Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.423Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.467Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.541Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-15T22:34:07.623Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:51.917Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:51.951Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:51.989Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:52.021Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:52.067Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:52.096Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:52.121Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:23:52.153Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:02.968Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.011Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.055Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.089Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.146Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.194Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.238Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:32:03.320Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.256Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.287Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.322Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.363Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.395Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.429Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.478Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T00:33:44.516Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.367Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.410Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.453Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.514Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.562Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.619Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.694Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:17:17.741Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.547Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.627Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.690Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.727Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.766Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.820Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.853Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:26:24.899Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:14.887Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:14.908Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:14.937Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:14.959Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:14.980Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:15.005Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:15.024Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T01:46:15.045Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.755Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.781Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.833Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.863Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.892Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.940Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:37.983Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T02:54:38.026Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.503Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.559Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.616Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.661Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.727Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.784Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.831Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:43:02.884Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.145Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.192Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.243Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.311Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.371Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.455Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.529Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T07:55:48.617Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.237Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.260Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.285Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.340Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.378Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.420Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.6,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.462Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0.8,
+    "evidencePairs": 1,
+    "timestamp": "2026-05-16T08:06:49.505Z",
+    "status": "active"
   }
 ]

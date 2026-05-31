@@ -54,7 +54,7 @@
     }
 
     function applyOverallStatus(statusMap) {
-        var keys = ["backend", "frontend", "database", "search", "llm", "epaas"];
+        var keys = ["backend", "frontend", "database", "search", "llm", "image", "epaas"];
         var hasDown = false;
         var hasDegraded = false;
         var hasUnknown = false;
@@ -183,12 +183,14 @@
         var systems = (incident && incident.systems && typeof incident.systems === "object") ? incident.systems : {};
         var incidentStatus = normalizeStatus(incident && incident.status);
         var fallback = incidentStatus === "operational" ? "operational" : (incidentStatus === "unknown" ? "unknown" : "degraded");
+        var imageFallback = systems.image || systems.llm || fallback;
         return {
             backend: systems.backend || fallback,
             frontend: systems.frontend || fallback,
             database: systems.database || fallback,
             search: systems.search || fallback,
             llm: systems.llm || fallback,
+            image: imageFallback,
             epaas: systems.epaas || fallback
         };
     }
@@ -313,7 +315,7 @@
             });
         }
         if (!rows.length) {
-            panel.innerHTML = '<div class="panel-empty">No eval_result entries yet.</div>';
+            panel.innerHTML = '<div class="panel-empty">Benchmark results will appear here after the next intelligence evaluation.</div>';
             return;
         }
         var bySuite = {};
@@ -344,7 +346,7 @@
         if (!panel) return;
         var rows = events.filter(function (e) { return e.type === "capability_update"; });
         if (!rows.length) {
-            panel.innerHTML = '<div class="panel-empty">No capability_update entries yet.</div>';
+            panel.innerHTML = '<div class="panel-empty">Capability maturity updates will appear here as SKIA evolves.</div>';
             return;
         }
         panel.innerHTML = rows.slice(0, 10).map(function (e) {
@@ -420,7 +422,7 @@
         if (!panel) return;
         var rows = events.filter(function (e) { return e.type === "weakness_analysis" || e.type === "strategy_update"; });
         if (!rows.length) {
-            panel.innerHTML = '<div class="panel-empty">No diagnostics entries yet.</div>';
+            panel.innerHTML = '<div class="panel-empty">Intelligence diagnostics will appear when new insights are published.</div>';
             return;
         }
         panel.innerHTML = rows.slice(0, 10).map(function (e) {
@@ -552,6 +554,9 @@
             }
             if (liveSummary.llm !== "unknown") {
                 systemValues.llm = liveSummary.llm;
+                if (!incident || !incident.systems || !incident.systems.image) {
+                    systemValues.image = liveSummary.llm;
+                }
             }
 
             applySystemStatus("backend-status", systemValues.backend);
@@ -559,6 +564,7 @@
             applySystemStatus("database-status", systemValues.database);
             applySystemStatus("search-status", systemValues.search);
             applySystemStatus("llm-status", systemValues.llm);
+            applySystemStatus("image-status", systemValues.image);
             applySystemStatus("epaas-status", systemValues.epaas);
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
@@ -578,6 +584,7 @@
             text("database-status", "Unknown");
             text("search-status", "Unknown");
             text("llm-status", "Unknown");
+            text("image-status", "Unknown");
             text("epaas-status", "Unknown");
             var intelligencePanel = document.getElementById("intelligence-report-panel");
             if (intelligencePanel) {

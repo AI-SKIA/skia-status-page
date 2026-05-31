@@ -4,10 +4,26 @@
     <meta charset="UTF-8" />
     <title>SKIA Status</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name='version' content='2026.04.19.v5'>
+    <meta name='version' content='2026.05.31.v7'>
     <link rel='icon' type='image/x-icon' href='/favicon.ico'>
     <link rel='shortcut icon' type='image/x-icon' href='/icon.ico'>
     <style>
+        @font-face {
+            font-family: "Agency FB";
+            src: url("/fonts/agency-fb/AgencyFB-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Centaur";
+            src: url("/fonts/centaur/Centaur-Regular.ttf") format("truetype");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --bg: #050509;
             --card: #0b0b12;
@@ -19,7 +35,9 @@
             --warn: #f5a623;
             --err: #ff4f4f;
             --border: #1b1b24;
-            --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+            --font-heading: "Agency FB", "Centaur", Georgia, serif;
+            --font-body: "Centaur", Georgia, "Times New Roman", serif;
+            --font: var(--font-body);
         }
 
         * {
@@ -223,11 +241,20 @@
         }
 
         .hero-title {
+            font-family: var(--font-heading);
             font-size: 22px;
             letter-spacing: 0.12em;
             text-transform: uppercase;
             color: var(--text);
             margin-bottom: 6px;
+        }
+
+        .hero-sovereign-note {
+            font-size: 12px;
+            color: var(--accent);
+            letter-spacing: 0.06em;
+            margin-bottom: 8px;
+            max-width: 560px;
         }
 
         .hero-sub {
@@ -558,6 +585,10 @@
 
             <section class="hero">
                 <h1 class="hero-title">Operational overview</h1>
+                <p class="hero-sovereign-note">
+                    Sovereign runtime: <strong>2M input context</strong> on Skia-Serve models (<code>skia:70b</code>, <code>skia:72b</code>, <code>skia:sovereign</code>).
+                    Long-context axis routes to <code>skia:llama4-latest</code> at <strong>10M</strong>.
+                </p>
                 <p class="hero-sub" id="hero-sub-text">
                     All systems are operating within normal parameters.
                 </p>
@@ -600,12 +631,12 @@
                                 <span class="system-status" data-system="database" id="database-status">—</span>
                             </div>
                             <div class="system-row">
-                                <span class="system-name">LLM Services</span>
+                                <span class="system-name">Skia-Serve (LLM)</span>
                                 <span class="system-status" data-system="llm" id="llm-status">—</span>
                             </div>
                             <div class="system-row">
                                 <span class="system-name">Image &amp; Video Engines</span>
-                                <span class="system-status" data-system="image">—</span>
+                                <span class="system-status" data-system="image" id="image-status">—</span>
                             </div>
                             <div class="system-row">
                                 <span class="system-name">Search &amp; Intelligence</span>
@@ -621,10 +652,11 @@
             </section>
 
             <section class="grid">
-                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Benchmark scores</div></div><div id="benchmark-panel" class="incident-body">No benchmark events yet.</div></div></article>
-                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Capability maturity</div></div><div id="capability-panel" class="incident-body">No capability updates yet.</div></div></article>
-                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Reasoning engine</div></div><div id="reasoning-panel" class="incident-body">Reasoning mode unavailable.</div></div></article>
-                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Memory health</div></div><div id="memory-panel" class="incident-body">Memory metrics unavailable.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Model &amp; routing</div></div><div id="model-routing-panel" class="incident-body">Sovereign models on Skia-Serve (:11500) use a <strong>2M</strong> input window. When a task exceeds that band, routing targets <strong>skia:llama4-latest</strong> with a <strong>10M</strong> manifest window. Google Gemini remains continuity fallback only.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Benchmark scores</div></div><div id="benchmark-panel" class="incident-body">Benchmark results will appear here after the next intelligence evaluation.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Capability maturity</div></div><div id="capability-panel" class="incident-body">Capability updates will appear here as SKIA evolves.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Reasoning engine</div></div><div id="reasoning-panel" class="incident-body">Reasoning insights will appear when new analysis is published.</div></div></article>
+                <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Memory health</div></div><div id="memory-panel" class="incident-body">Memory health summaries will appear when available.</div></div></article>
                 <article class="card"><div class="card-inner"><div class="card-header"><div class="card-title">Intelligence diagnostics</div></div><div id="intelligence-diagnostics-panel" class="incident-body">No weakness analysis yet.</div></div></article>
             </section>
 
@@ -634,7 +666,7 @@
                         <div class="card-title">⬡ SKIA Intelligence Report</div>
                     </div>
                     <div id="intelligence-report-panel" class="panel-empty">
-                        Loading SKIA intelligence...
+                        Preparing your intelligence report…
                     </div>
                 </div>
             </section>

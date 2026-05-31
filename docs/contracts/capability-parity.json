@@ -1,6 +1,8 @@
 {
   "surface": "skia-status",
-  "version": "1.0.0",
+  "version": "1.1.0",
+  "featureCount": 112,
+  "workspaceCount": 10,
   "capabilities": [
     "identity",
     "auth",
@@ -10,5 +12,17 @@
     "output-standards",
     "api-access",
     "governance"
+  ],
+  "workspaces": [
+    { "id": "brand", "label": "Brand & Identity", "hubRoute": "/brand-experience" },
+    { "id": "content", "label": "Content & Writing", "hubRoute": "/content-writing" },
+    { "id": "creative", "label": "Creative & Media", "hubRoute": "/creative-intelligence" },
+    { "id": "audio", "label": "Audio & Voice", "hubRoute": "/audio-voice" },
+    { "id": "video", "label": "Video & Presentation", "hubRoute": "/video-presentation" },
+    { "id": "data", "label": "Data & Analytics", "hubRoute": "/data-insight-systems" },
+    { "id": "security", "label": "Security & Threat Intel", "hubRoute": "/security-intel" },
+    { "id": "developer", "label": "Developer & Code", "hubRoute": "/developer-code" },
+    { "id": "strategy", "label": "Strategy & Operations", "hubRoute": "/strategy-ops" },
+    { "id": "document", "label": "Document & Legal Intelligence", "hubRoute": "/document-legal" }
   ]
 }

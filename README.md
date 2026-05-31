@@ -27,17 +27,16 @@ Provide transparent operational, benchmark, and capability visibility.
 
 ### Supported event types
 
-- `incident`
-  - Purpose: service-impacting production event.
-  - Typical fields: `id`, `title`, `status`, `start`, `end`, `impact`, `systems`.
-  - `systems` is a map of subsystem -> status (`operational`, `degraded`, `down`).
-- `eval_result`
-  - Purpose: benchmark/eval output snapshot for a named suite.
-  - Typical fields: `id`, `suite`, `skiaScore`, `claudeOpus47Baseline`, `delta`, `timestamp`, `status`.
-  - Required governance rule: non-provider or placeholder runs must be marked `superseded` with explicit reason metadata.
-- `capability_update`
-  - Purpose: lifecycle transition of a capability (for example `partial -> active`).
-  - Typical fields: `id`, `capability`, `fromState`, `toState`, `evidence`, `timestamp`, `status`.
+Canonical list (see `docs/INCIDENT_EVENT_SCHEMA.md`):
+
+- `incident` — service-impacting production event (`systems` map per subsystem).
+- `eval_result` — benchmark/eval snapshot (`suite`, `skiaScore`, provider-backed active rows).
+- `capability_update` — capability lifecycle transition (`fromState`, `toState`, `evidence`).
+- `strategy_update` — non-outage intelligence narrative (retention policy in `docs/operations/ledger-hygiene.md`).
+- `weakness_analysis` — diagnostics for intelligence panels.
+- `supersession_milestone` — benchmark supersession markers.
+
+`incidents.html` lists **`incident`** events only. `index.html` renders all types in their respective panels.
 
 ### Versioning and compatibility guidance
 

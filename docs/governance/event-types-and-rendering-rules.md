@@ -3,7 +3,7 @@
 ## Rendering Contract
 
 - `index.html` focuses on current/summary state.
-- `incidents.html` renders full timeline across all event types.
+- `incidents.html` renders the **incident** timeline only (`type === "incident"`). Other types appear on `index.html` panels.
 
 ## Rules
 

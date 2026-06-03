@@ -210,11 +210,31 @@
         });
     }
 
+    async function probeMediaServiceHealth(primaryPath, fallbackPaths) {
+        var paths = [primaryPath].concat(fallbackPaths || []);
+        for (var i = 0; i < paths.length; i += 1) {
+            try {
+                var res = await fetchWithTimeout(paths[i], { method: "GET" }, API_TIMEOUT_MS);
+                if (res.ok) {
+                    var json = await res.json();
+                    return normalizeStatus(json && (json.status || json.overall));
+                }
+            } catch (_probeErr) {
+                /* try next path — primary may not exist on all deployments */
+            }
+        }
+        return "unknown";
+    }
+
     async function fetchLiveHealthSummary() {
         var summary = {
             backend: "unknown",
             database: "unknown",
-            llm: "unknown"
+            llm: "unknown",
+            image: "unknown",
+            video: "unknown",
+            tts: "unknown",
+            embedding: "unknown"
         };
         try {
             var backendRes = await fetchWithTimeout("/api/health", { method: "GET" }, API_TIMEOUT_MS);
@@ -244,6 +264,11 @@
         } catch (_e2) {
             // Keep value from /api/health fallback.
         }
+        // Media engines — prefer /api/{service}/health; fallback /api/health/{service} or /health (see backend routes).
+        summary.image = await probeMediaServiceHealth("/api/image/health", ["/api/health/image", "/health/image"]);
+        summary.video = await probeMediaServiceHealth("/api/video/health", ["/api/health/video", "/health/video"]);
+        summary.tts = await probeMediaServiceHealth("/api/tts/health", ["/api/health/tts", "/health/tts"]);
+        summary.embedding = await probeMediaServiceHealth("/api/embedding/health", ["/api/local/engines/embedding-probe", "/health"]);
         return summary;
     }
 
@@ -555,8 +580,22 @@
             if (liveSummary.llm !== "unknown") {
                 systemValues.llm = liveSummary.llm;
                 if (!incident || !incident.systems || !incident.systems.image) {
-                    systemValues.image = liveSummary.llm;
+                    if (liveSummary.image === "unknown") {
+                        systemValues.image = liveSummary.llm;
+                    }
                 }
+            }
+            if (liveSummary.image !== "unknown") {
+                systemValues.image = liveSummary.image;
+            }
+            if (liveSummary.video !== "unknown" && Object.prototype.hasOwnProperty.call(systemValues, "video")) {
+                systemValues.video = liveSummary.video;
+            }
+            if (liveSummary.tts !== "unknown" && Object.prototype.hasOwnProperty.call(systemValues, "tts")) {
+                systemValues.tts = liveSummary.tts;
+            }
+            if (liveSummary.embedding !== "unknown" && Object.prototype.hasOwnProperty.call(systemValues, "embedding")) {
+                systemValues.embedding = liveSummary.embedding;
             }
 
             applySystemStatus("backend-status", systemValues.backend);
@@ -565,6 +604,9 @@
             applySystemStatus("search-status", systemValues.search);
             applySystemStatus("llm-status", systemValues.llm);
             applySystemStatus("image-status", systemValues.image);
+            applySystemStatus("video-status", systemValues.video);
+            applySystemStatus("tts-status", systemValues.tts);
+            applySystemStatus("embedding-status", systemValues.embedding);
             applySystemStatus("epaas-status", systemValues.epaas);
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
@@ -585,6 +627,9 @@
             text("search-status", "Unknown");
             text("llm-status", "Unknown");
             text("image-status", "Unknown");
+            text("video-status", "Unknown");
+            text("tts-status", "Unknown");
+            text("embedding-status", "Unknown");
             text("epaas-status", "Unknown");
             var intelligencePanel = document.getElementById("intelligence-report-panel");
             if (intelligencePanel) {

@@ -22,7 +22,7 @@ jobs:
           jq -e '
             type == "array" and
             (all(.[]; has("type"))) and
-            (all(.[]; .type == "incident" or .type == "capability_update" or .type == "eval_result" or .type == "strategy_update" or .type == "weakness_analysis" or .type == "supersession_milestone"))
+            (all(.[]; .type == "incident" or .type == "capability_update" or .type == "eval_result" or .type == "strategy_update" or .type == "weakness_analysis" or .type == "supersession_milestone" or .type == "drift_alert" or .type == "fairness_drift"))
           ' incidents.json > /dev/null
 
       - name: Verify static assets exist

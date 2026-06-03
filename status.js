@@ -470,6 +470,26 @@
         }).join("");
     }
 
+    async function renderOpsMetricsPanel() {
+        var panel = document.getElementById("ops-metrics-panel");
+        if (!panel) return;
+        try {
+            var response = await fetchWithTimeout("/api/public/status-metrics", { cache: "no-store" }, API_TIMEOUT_MS);
+            if (!response.ok) throw new Error("HTTP " + response.status);
+            var data = await response.json();
+            var embed = data.embeddingVector || {};
+            panel.innerHTML =
+                '<div class="panel-row"><span class="panel-key">Sovereign fallback</span><span class="panel-value">' + esc(String(data.sovereignFallbackRatePct != null ? data.sovereignFallbackRatePct : "—") + "%") + '</span></div>' +
+                '<div class="panel-row"><span class="panel-key">Output refusal</span><span class="panel-value">' + esc(String(data.outputRefusalRatePct != null ? data.outputRefusalRatePct : "—") + "%") + '</span></div>' +
+                '<div class="panel-row"><span class="panel-key">Challenger fail</span><span class="panel-value">' + esc(String(data.adversarialChallengerFailRatePct != null ? data.adversarialChallengerFailRatePct : "—") + "%") + '</span></div>' +
+                '<div class="panel-row"><span class="panel-key">Embedding / vector</span><span class="panel-value">' +
+                esc((embed.provisionedOnNorthflank ? "provisioned" : "not provisioned") + (embed.embeddingEngineConfigured ? " · env URL set" : "")) +
+                '</span></div>';
+        } catch (_e) {
+            panel.innerHTML = '<div class="panel-empty">Operational metrics unavailable (proxy or sampling off).</div>';
+        }
+    }
+
     function renderPanels(events) {
         renderBenchmarkPanel(events);
         renderCapabilityPanel(events);
@@ -611,6 +631,7 @@
             applyOverallStatus(systemValues);
             updateRecentIncident(incident);
             renderPanels(events);
+            await renderOpsMetricsPanel();
             await renderIntelligenceReport(events);
         } catch (error) {
             var freshnessBadge = document.getElementById("data-freshness");

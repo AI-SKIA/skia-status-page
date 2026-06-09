@@ -1,11 +1,10 @@
 # Fetches incidents.json from the backend ledger export and commits when changed.
 # Triggers Northflank CD on push if your NF project rebuilds skia-status-page from this repo.
 #
-# Required GitHub repo secrets:
-#   INCIDENTS_LEDGER_FETCH_URL — full URL, e.g. https://<backend-public-host>/api/system/incidents-ledger
-#   INCIDENTS_LEDGER_FETCH_TOKEN — must match backend INCIDENTS_LEDGER_FETCH_TOKEN
+# Required GitHub repo secret:
+#   INCIDENTS_LEDGER_FETCH_TOKEN — must match login INCIDENTS_LEDGER_FETCH_TOKEN
 #
-# Backend must set INCIDENTS_LEDGER_FETCH_TOKEN and expose the route on the deployment CI calls (usually backend service URL, not login-only).
+# Ledger export lives on api.skia.ca (login service): GET /api/system/incidents-ledger
 
 name: Sync incidents ledger
 
@@ -31,16 +30,19 @@ jobs:
 
       - name: Fetch ledger from backend
         env:
-          URL: ${{ secrets.INCIDENTS_LEDGER_FETCH_URL }}
+          URL: https://api.skia.ca/api/system/incidents-ledger
           TOKEN: ${{ secrets.INCIDENTS_LEDGER_FETCH_TOKEN }}
         run: |
           set -euo pipefail
-          if [ -z "${URL:-}" ] || [ -z "${TOKEN:-}" ]; then
-            echo "INCIDENTS_LEDGER_FETCH_URL and INCIDENTS_LEDGER_FETCH_TOKEN secrets must be set."
+          TOKEN="$(printf '%s' "${TOKEN:-}" | tr -d '\r\n' | xargs)"
+          if [ -z "${TOKEN:-}" ]; then
+            echo "INCIDENTS_LEDGER_FETCH_TOKEN secret must be set."
             exit 1
           fi
           for attempt in 1 2 3; do
-            if curl -fsSL --connect-timeout 10 --max-time 30 --retry 0 -H "Authorization: Bearer ${TOKEN}" "${URL}" -o incidents.json.new; then
+            if curl -fsSL --connect-timeout 10 --max-time 30 --retry 0 \
+              -H "Authorization: Bearer ${TOKEN}" \
+              "${URL}" -o incidents.json.new; then
               break
             fi
             if [ "$attempt" -eq 3 ]; then

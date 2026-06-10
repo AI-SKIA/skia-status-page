@@ -54,15 +54,22 @@
     }
 
     function applyOverallStatus(statusMap) {
-        var keys = ["backend", "frontend", "database", "search", "llm", "image", "epaas"];
+        // Overall banner reflects critical probes only (backend, frontend, database).
+        var criticalKeys = ["backend", "frontend", "database"];
+        var allKeys = ["backend", "frontend", "database", "search", "llm", "image", "epaas"];
         var hasDown = false;
         var hasDegraded = false;
         var hasUnknown = false;
-        for (var i = 0; i < keys.length; i += 1) {
-            var normalized = normalizeStatus(statusMap[keys[i]]);
-            if (normalized === "down") hasDown = true;
-            if (normalized === "degraded") hasDegraded = true;
-            if (normalized === "unknown") hasUnknown = true;
+        var hasNonCriticalDegraded = false;
+        for (var i = 0; i < criticalKeys.length; i += 1) {
+            var criticalNormalized = normalizeStatus(statusMap[criticalKeys[i]]);
+            if (criticalNormalized === "down") hasDown = true;
+            if (criticalNormalized === "degraded") hasDegraded = true;
+            if (criticalNormalized === "unknown") hasUnknown = true;
+        }
+        for (var j = 0; j < allKeys.length; j += 1) {
+            if (criticalKeys.indexOf(allKeys[j]) >= 0) continue;
+            if (normalizeStatus(statusMap[allKeys[j]]) === "degraded") hasNonCriticalDegraded = true;
         }
         var label = hasDown ? "Major outage" : (hasDegraded ? "System degraded" : (hasUnknown ? "Status partially unknown" : "All systems operational"));
         text("system-status", label);
@@ -70,10 +77,12 @@
         var heroSub = hasDown
             ? "One or more critical systems failed live health checks. See Core systems for details."
             : hasDegraded
-                ? "Some components are degraded or operating with reduced capacity."
+                ? "One or more critical systems are degraded. See Core systems for details."
                 : hasUnknown
-                    ? "Some checks did not complete; status may be incomplete until probes recover."
-                    : "All systems are operating within normal parameters.";
+                    ? "Some critical checks did not complete; status may be incomplete until probes recover."
+                    : hasNonCriticalDegraded
+                        ? "Critical systems are operational. Some non-critical components (LLM, search) may be running with reduced capacity — see Core systems."
+                        : "All systems are operating within normal parameters.";
         text("hero-sub-text", heroSub);
 
         var pill = document.querySelector(".status-pill");

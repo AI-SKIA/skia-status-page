@@ -36,11 +36,9 @@
     "id": "skia-health-2026-04-21",
     "type": "incident",
     "title": "System degraded — backend, database failure",
-    "status": "resolved",
+    "status": "monitoring",
     "start": "2026-04-21 10:25 UTC",
-    "end": "2026-06-10T12:00:00.000Z",
-    "impact": "Critical systems have recovered. Manually resolved after auto-resolution bug (monitoring status not tracked as open in isOpenIncidentRow).",
-    "lastChecked": "2026-06-10T12:00:00.000Z",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -49,9 +47,10 @@
       "chat": "operational",
       "image": "operational",
       "search": "operational",
-      "llm": "operational",
-      "epaas": "operational"
-    }
+      "llm": "degraded"
+    },
+    "lastChecked": "2026-06-10T08:56:14.182Z",
+    "healthyRuns": 2
   },
   {
     "id": "skia-bridge-sync-2026-04-19",

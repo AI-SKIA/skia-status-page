@@ -20,6 +20,10 @@ It supersedes minimal schema notes in `docs/schema/incidents-json-schema.md` and
 - `supersession_milestone`
 - `weakness_analysis`
 - `strategy_update`
+- `drift_alert` — operational drift (moderation/challenger composite); from `SkiaSelfHealJob`
+- `fairness_drift` — fairness monitoring drift; from `SkiaSelfHealJob` when `DriftMonitorService` fairness signal triggers
+
+`drift_alert` and `fairness_drift` are **informational** on `index.html` (not outage rows on `incidents.html`). Consumers must not treat them as unresolved production incidents unless `status` indicates an active outage.
 
 ## Common fields
 

@@ -35,23 +35,21 @@
   {
     "id": "skia-health-2026-04-21",
     "type": "incident",
-    "title": "System degraded — backend, database failure",
-    "status": "resolved",
+    "title": "System degraded — backend failure",
+    "status": "investigating",
     "start": "2026-04-21 10:25 UTC",
-    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
+    "impact": "Critical systems failed: backend. Suggested actions: Increase backend health-check frequency, add a circuit breaker around /api/health, and enable autoscaling for error bursts. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Add search timeouts and exponential backoff retries; implement fallback-to-secondary-search and cache popular queries.",
     "systems": {
       "frontend": "operational",
-      "backend": "operational",
+      "backend": "degraded",
       "database": "operational",
-      "auth": "operational",
-      "chat": "operational",
-      "image": "operational",
+      "auth": "degraded",
+      "chat": "degraded",
+      "image": "degraded",
       "search": "operational",
       "llm": "degraded"
     },
-    "lastChecked": "2026-06-10T17:18:12.494Z",
-    "healthyRuns": 2,
-    "end": "2026-06-10T17:18:12.494Z"
+    "lastChecked": "2026-06-11T11:11:04.506Z"
   },
   {
     "id": "skia-bridge-sync-2026-04-19",

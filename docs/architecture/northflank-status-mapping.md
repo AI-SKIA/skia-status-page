@@ -24,7 +24,7 @@ Static assets + `incidents.json`; `/api/*` proxied to `https://api.skia.ca` for 
 | LLM Services | `llm` | `/api/health` LLM section | **`skia-serve` :11500** (primary) |
 | Image & Video Engines | `image` | Ledger + LLM health fallback | `image-engine`, `video-engine` :8188 |
 | Search & Intelligence | `search` | Ledger | `searxng` :8080 |
-| EPAAS Security | `epaas` | Ledger | Governance/EPAAS on login |
+| EPAAS Security | `epaas` | Ledger | Governance/EPAAS v2 threat intelligence on login |
 
 ## Services not shown as separate rows
 

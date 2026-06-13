@@ -22,6 +22,20 @@
     "providerBacked": true
   },
   {
+    "id": "epaas-v2-threat-intelligence-2026-06-12",
+    "type": "capability_update",
+    "capability": "EPAAS",
+    "fromState": "operational",
+    "toState": "operational",
+    "timestamp": "2026-06-12T18:00:00.000Z",
+    "status": "active",
+    "title": "EPAAS v2 sovereign threat intelligence live",
+    "evidence": "Seven predictive layers active: Prompt DNA, behavioral biometrics, semantic poison detector, output entanglement scorer, adversarial gradient shield, temporal consistency enforcer, shadow intent engine.",
+    "systems": {
+      "epaas": "operational"
+    }
+  },
+  {
     "id": "epaas-operational-2026-05-05",
     "type": "capability_update",
     "capability": "EPAAS",

@@ -30,9 +30,9 @@
 
     function normalizeStatus(value) {
         var s = String(value || "").toLowerCase();
-        if (s === "ok" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") return "operational";
-        if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded") return "degraded";
-        if (s === "outage" || s === "down" || s === "fail" || s === "failed") return "down";
+        if (s === "ok" || s === "online" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") return "operational";
+        if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded" || s === "monitoring") return "degraded";
+        if (s === "outage" || s === "down" || s === "fail" || s === "failed" || s === "error") return "down";
         return "unknown";
     }
 
@@ -135,10 +135,10 @@
         return max;
     }
 
-    function updateDataFreshnessBadge(events) {
+    function updateDataFreshnessBadge(events, probeTimeMs) {
         var badge = document.getElementById("data-freshness");
         if (!badge) return;
-        var latest = 0;
+        var latest = typeof probeTimeMs === "number" && probeTimeMs > 0 ? probeTimeMs : 0;
         if (Array.isArray(events)) {
             for (var i = 0; i < events.length; i += 1) {
                 var t = parseIncidentRecencyMs(events[i]);
@@ -165,7 +165,14 @@
         badge.textContent = "Fresh";
     }
 
-    function pickRecentIncident(events) {
+    function isOpenIncidentRow(e) {
+        if (!e || e.type !== "incident") return false;
+        if (e.end) return false;
+        var st = normalizeStatus(e.status);
+        return st === "degraded" || st === "down";
+    }
+
+    function pickRecentIncident(events, liveCriticalHealthy) {
         if (!Array.isArray(events)) return null;
         var bestOpen = null;
         var bestOpenT = -1;
@@ -175,7 +182,7 @@
             var e = events[i];
             if (!e || e.type !== "incident") continue;
             var t = parseIncidentRecencyMs(e);
-            var isOpen = !e.end && normalizeStatus(e.status) !== "operational";
+            var isOpen = isOpenIncidentRow(e);
             if (isOpen && t >= bestOpenT) {
                 bestOpenT = t;
                 bestOpen = e;
@@ -185,6 +192,7 @@
                 best = e;
             }
         }
+        if (liveCriticalHealthy) return bestOpen;
         return bestOpen || best;
     }
 
@@ -235,43 +243,81 @@
         return "unknown";
     }
 
+    async function fetchJsonWithRetry(url, options, timeoutMs, attempts) {
+        var tries = attempts || 2;
+        var lastErr = null;
+        for (var attempt = 0; attempt < tries; attempt += 1) {
+            try {
+                var res = await fetchWithTimeout(url, options, timeoutMs);
+                if (res.ok) return { ok: true, res: res, json: await res.json() };
+                if (res.status >= 500 && attempt < tries - 1) {
+                    await new Promise(function (r) { setTimeout(r, 400 * (attempt + 1)); });
+                    continue;
+                }
+                return { ok: false, res: res, json: null };
+            } catch (err) {
+                lastErr = err;
+                if (attempt < tries - 1) {
+                    await new Promise(function (r) { setTimeout(r, 400 * (attempt + 1)); });
+                    continue;
+                }
+            }
+        }
+        return { ok: false, res: null, json: null, err: lastErr };
+    }
+
     async function fetchLiveHealthSummary() {
         var summary = {
             backend: "unknown",
+            frontend: "unknown",
             database: "unknown",
             llm: "unknown",
             image: "unknown",
             video: "unknown",
             tts: "unknown",
-            embedding: "unknown"
+            embedding: "unknown",
+            probedAt: 0
         };
-        try {
-            var backendRes = await fetchWithTimeout("/api/health", { method: "GET" }, API_TIMEOUT_MS);
-            if (backendRes.ok) {
-                var backendJson = await backendRes.json();
-                summary.backend = normalizeStatus(backendJson && backendJson.overall ? backendJson.overall : backendJson && backendJson.status);
-                if (backendJson && backendJson.database && backendJson.database.status) {
-                    summary.database = normalizeStatus(backendJson.database.status);
-                }
-                if (backendJson && backendJson.llm && backendJson.llm.status) {
-                    summary.llm = normalizeStatus(backendJson.llm.status);
-                }
-            } else {
-                summary.backend = "down";
+        var backendProbe = await fetchJsonWithRetry("/api/health", { method: "GET" }, API_TIMEOUT_MS, 2);
+        if (backendProbe.ok && backendProbe.json) {
+            summary.probedAt = Date.now();
+            var backendJson = backendProbe.json;
+            summary.backend = normalizeStatus(backendJson && backendJson.overall ? backendJson.overall : backendJson && backendJson.status);
+            if (backendJson && backendJson.database && backendJson.database.status) {
+                summary.database = normalizeStatus(backendJson.database.status);
             }
-        } catch (_e) {
-            summary.backend = "unknown";
+            if (backendJson && backendJson.llm && backendJson.llm.status) {
+                summary.llm = normalizeStatus(backendJson.llm.status);
+            }
+        } else if (backendProbe.res && backendProbe.res.status >= 500) {
+            summary.backend = "degraded";
+        } else if (backendProbe.res) {
+            summary.backend = "down";
         }
         try {
-            var dbRes = await fetchWithTimeout("/api/health/database", { method: "GET" }, API_TIMEOUT_MS);
-            if (dbRes.ok) {
-                var dbJson = await dbRes.json();
-                summary.database = normalizeStatus(dbJson && dbJson.status);
-            } else {
+            var frontendProbe = await fetchJsonWithRetry("/api/frontend/health", { method: "GET" }, API_TIMEOUT_MS, 2);
+            if (frontendProbe.ok && frontendProbe.json) {
+                summary.probedAt = Date.now();
+                var frontendJson = frontendProbe.json;
+                summary.frontend = normalizeStatus(frontendJson && frontendJson.overall ? frontendJson.overall : frontendJson && frontendJson.status);
+            } else if (frontendProbe.res && frontendProbe.res.status >= 500) {
+                summary.frontend = "degraded";
+            } else if (frontendProbe.res) {
+                summary.frontend = "down";
+            }
+        } catch (_fe) {
+            /* optional probe */
+        }
+        if (summary.database === "unknown") {
+            var dbProbe = await fetchJsonWithRetry("/api/health/database", { method: "GET" }, API_TIMEOUT_MS, 2);
+            if (dbProbe.ok && dbProbe.json) {
+                summary.probedAt = Date.now();
+                summary.database = normalizeStatus(dbProbe.json && dbProbe.json.status);
+            } else if (dbProbe.res && dbProbe.res.status >= 500) {
+                summary.database = "degraded";
+            } else if (dbProbe.res) {
                 summary.database = "down";
             }
-        } catch (_e2) {
-            // Keep value from /api/health fallback.
         }
         // Media engines — prefer /api/{service}/health; fallback /api/health/{service} or /health (see backend routes).
         summary.image = await probeMediaServiceHealth("/api/image/health", ["/api/health/image", "/health/image"]);
@@ -281,11 +327,11 @@
         return summary;
     }
 
-    function updateRecentIncident(incident) {
+    function updateRecentIncident(incident, liveCriticalHealthy) {
         var recentWrapper = document.getElementById("recent-incident");
         if (recentWrapper) recentWrapper.classList.remove("loading");
 
-        if (!incident) {
+        if (!incident || (liveCriticalHealthy && !isOpenIncidentRow(incident))) {
             text("recent-incident-title", "No recent incidents");
             text("recent-incident-description", "All systems have been running normally.");
             text("recent-incident-time", "No recent activity");
@@ -591,17 +637,23 @@
             var raw = await response.text();
             var data = JSON.parse(raw.replace(/^\uFEFF/, ""));
             var events = Array.isArray(data) ? data : [];
-            updateDataFreshnessBadge(events);
-            var incident = pickRecentIncident(events);
+            var liveSummary = await fetchLiveHealthSummary();
+            updateDataFreshnessBadge(events, liveSummary.probedAt);
+            var liveCriticalHealthy =
+                normalizeStatus(liveSummary.backend) === "operational" &&
+                normalizeStatus(liveSummary.frontend) !== "down" &&
+                normalizeStatus(liveSummary.database) === "operational";
+            var incident = pickRecentIncident(events, liveCriticalHealthy);
             var systemValues = mapSystemValues(incident);
 
-            // Live backend health checks through same-origin proxy and override stale ledger values.
-            var liveSummary = await fetchLiveHealthSummary();
             if (liveSummary.backend !== "unknown") {
                 systemValues.backend = liveSummary.backend;
                 if (Object.prototype.hasOwnProperty.call(systemValues, "auth")) {
                     systemValues.auth = liveSummary.backend;
                 }
+            }
+            if (liveSummary.frontend !== "unknown") {
+                systemValues.frontend = liveSummary.frontend;
             }
             if (liveSummary.database !== "unknown") {
                 systemValues.database = liveSummary.database;
@@ -638,7 +690,7 @@
             applySystemStatus("embedding-status", systemValues.embedding);
             applySystemStatus("epaas-status", systemValues.epaas);
             applyOverallStatus(systemValues);
-            updateRecentIncident(incident);
+            updateRecentIncident(incident, liveCriticalHealthy);
             renderPanels(events);
             await renderOpsMetricsPanel();
             await renderIntelligenceReport(events);
@@ -648,7 +700,7 @@
                 freshnessBadge.className = "meta-badge stale";
                 freshnessBadge.textContent = "Unknown";
             }
-            updateRecentIncident(null);
+            updateRecentIncident(null, false);
             text("system-status", "Status unavailable");
             text("hero-sub-text", "Unable to load live status data. Refresh the page or try again shortly.");
             text("backend-status", "Unknown");

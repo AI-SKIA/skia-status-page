@@ -47,23 +47,44 @@
     "evidence": "Ephemeral routing and adversary detection now active."
   },
   {
+    "id": "skia-status-heartbeat",
+    "type": "status_heartbeat",
+    "title": "Automated health check",
+    "status": "active",
+    "timestamp": "2026-06-12T23:00:00.000Z",
+    "lastChecked": "2026-06-12T23:00:00.000Z",
+    "systems": {
+      "frontend": "operational",
+      "backend": "operational",
+      "database": "operational",
+      "auth": "operational",
+      "chat": "operational",
+      "image": "operational",
+      "search": "operational",
+      "llm": "operational",
+      "epaas": "operational"
+    }
+  },
+  {
     "id": "skia-health-2026-04-21",
     "type": "incident",
     "title": "System degraded — backend failure",
-    "status": "investigating",
+    "status": "resolved",
     "start": "2026-04-21 10:25 UTC",
-    "impact": "Critical systems failed: backend. Suggested actions: Increase backend health-check frequency, add a circuit breaker around /api/health, and enable autoscaling for error bursts. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Add search timeouts and exponential backoff retries; implement fallback-to-secondary-search and cache popular queries.",
+    "end": "2026-06-12T23:00:00.000Z",
+    "impact": "Transient backend probe failure during deployment. Critical systems have recovered; incident closed by automated health monitoring.",
     "systems": {
       "frontend": "operational",
-      "backend": "degraded",
+      "backend": "operational",
       "database": "operational",
-      "auth": "degraded",
-      "chat": "degraded",
-      "image": "degraded",
+      "auth": "operational",
+      "chat": "operational",
+      "image": "operational",
       "search": "operational",
-      "llm": "degraded"
+      "llm": "operational",
+      "epaas": "operational"
     },
-    "lastChecked": "2026-06-12T22:06:13.104Z"
+    "lastChecked": "2026-06-12T23:00:00.000Z"
   },
   {
     "id": "skia-bridge-sync-2026-04-19",

@@ -73,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-06-14T01:35:12.061Z",
-    "lastChecked": "2026-06-14T01:35:12.061Z",
+    "timestamp": "2026-06-14T06:05:12.276Z",
+    "lastChecked": "2026-06-14T06:05:12.276Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",

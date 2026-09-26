@@ -24,6 +24,7 @@ COPY icon.ico       ./icon.ico
 # These were missing — without them the dashboard is dead.
 COPY status.js      ./status.js
 COPY incidents.js   ./incidents.js
+COPY fonts/         ./fonts/
 
 # 5. COPY NGINX CONFIG
 COPY nginx.conf /etc/nginx/conf.d/default.conf

@@ -73,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-09-26T13:51:51.590Z",
-    "lastChecked": "2026-09-26T13:51:51.590Z",
+    "timestamp": "2026-09-26T17:36:51.593Z",
+    "lastChecked": "2026-09-26T17:36:51.593Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -82,7 +82,7 @@
       "auth": "operational",
       "chat": "operational",
       "image": "operational",
-      "search": "degraded",
+      "search": "operational",
       "llm": "operational",
       "epaas": "operational"
     }

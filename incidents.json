@@ -1,23 +1,25 @@
 [
   {
-    "id": "skia-health-1790415917269",
+    "id": "skia-health-1790416688281",
     "type": "incident",
     "title": "System degraded — frontend failure",
-    "status": "investigating",
-    "start": "2026-09-26 09:39 UTC",
-    "impact": "Critical systems failed: frontend. Suggested actions: For frontend: add targeted health checks, retries with jitter, and instrument metrics to diagnose recurring issues. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Add search timeouts and exponential backoff retries; implement fallback-to-secondary-search and cache popular queries.",
+    "status": "resolved",
+    "start": "2026-09-26 09:52 UTC",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
     "systems": {
-      "frontend": "degraded",
+      "frontend": "operational",
       "backend": "operational",
       "database": "operational",
-      "auth": "degraded",
+      "auth": "operational",
       "chat": "operational",
       "image": "operational",
       "search": "operational",
       "llm": "operational",
       "epaas": "operational"
     },
-    "lastChecked": "2026-09-26T09:45:17.269Z"
+    "lastChecked": "2026-09-26T10:39:28.476Z",
+    "healthyRuns": 2,
+    "end": "2026-09-26T10:39:28.476Z"
   },
   {
     "id": "sovereign_context_upgrade_2M",
@@ -71,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-06-12T23:00:00.000Z",
-    "lastChecked": "2026-06-12T23:00:00.000Z",
+    "timestamp": "2026-09-26T13:51:51.590Z",
+    "lastChecked": "2026-09-26T13:51:51.590Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -80,7 +82,7 @@
       "auth": "operational",
       "chat": "operational",
       "image": "operational",
-      "search": "operational",
+      "search": "degraded",
       "llm": "operational",
       "epaas": "operational"
     }

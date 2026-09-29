@@ -1,23 +1,25 @@
 [
   {
-    "id": "skia-health-1790632352107",
+    "id": "skia-health-1790633568106",
     "type": "incident",
-    "title": "System degraded — backend failure",
-    "status": "investigating",
-    "start": "2026-09-28 21:52 UTC",
-    "impact": "Critical systems failed: backend. Suggested actions: Increase backend health-check frequency, add a circuit breaker around /api/health, and enable autoscaling for error bursts. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Add search timeouts and exponential backoff retries; implement fallback-to-secondary-search and cache popular queries.",
+    "title": "System degraded — frontend failure",
+    "status": "resolved",
+    "start": "2026-09-28 22:12 UTC",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
     "systems": {
       "frontend": "operational",
-      "backend": "degraded",
+      "backend": "operational",
       "database": "operational",
-      "auth": "degraded",
-      "chat": "degraded",
-      "image": "degraded",
+      "auth": "operational",
+      "chat": "operational",
+      "image": "operational",
       "search": "operational",
       "llm": "operational",
-      "epaas": "degraded"
+      "epaas": "operational"
     },
-    "lastChecked": "2026-09-28T21:52:32.107Z"
+    "lastChecked": "2026-09-28T22:57:33.013Z",
+    "healthyRuns": 2,
+    "end": "2026-09-28T22:57:33.013Z"
   },
   {
     "id": "sovereign_context_upgrade_2M",
@@ -71,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-06-12T23:00:00.000Z",
-    "lastChecked": "2026-06-12T23:00:00.000Z",
+    "timestamp": "2026-09-29T01:42:24.691Z",
+    "lastChecked": "2026-09-29T01:42:24.691Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -1835,86 +1837,6 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.212Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "code",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.310Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "math",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.322Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "long-context",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.352Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "multimodal",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.387Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "agentic",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.451Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "creative",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.533Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "factual",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.576Z",
-    "status": "active"
-  },
-  {
-    "type": "strategy_update",
-    "taskType": "tool-use",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0.8,
-    "evidencePairs": 1,
-    "timestamp": "2026-09-28T23:17:58.591Z",
     "status": "active"
   }
 ]

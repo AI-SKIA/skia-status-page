@@ -33,17 +33,19 @@
         if (s === "ok" || s === "online" || s === "healthy" || s === "resolved" || s === "operational" || s === "up") return "operational";
         if (s === "warn" || s === "warning" || s === "investigating" || s === "degraded" || s === "monitoring") return "degraded";
         if (s === "outage" || s === "down" || s === "fail" || s === "failed" || s === "error") return "down";
+        if (s === "paused") return "paused";
         return "unknown";
     }
 
     function statusLabel(value) {
+        if (value === "paused") return "Paused";
         if (value === "down") return "Down";
         if (value === "degraded") return "Degraded";
         if (value === "unknown") return "Unknown";
         return "Operational";
     }
 
-    function applySystemStatus(id, statusValue) {
+    function applySystemStatus(id, statusValue, note) {
         var el = document.getElementById(id);
         if (!el) return;
         var normalized = normalizeStatus(statusValue);
@@ -51,6 +53,53 @@
         el.className = "system-status";
         if (normalized === "degraded") el.classList.add("degraded");
         if (normalized === "down") el.classList.add("down");
+        if (normalized === "paused") el.classList.add("paused");
+        var row = el.parentNode;
+        var noteEl = row ? row.querySelector(".system-note") : null;
+        if (normalized === "paused" && note) {
+            if (!noteEl && row) {
+                noteEl = document.createElement("span");
+                noteEl.className = "system-note";
+                row.appendChild(noteEl);
+            }
+            if (noteEl) noteEl.textContent = note;
+        } else if (noteEl) {
+            noteEl.parentNode.removeChild(noteEl);
+        }
+    }
+
+    // paused-services.json lists services the operator paused on purpose; their systems show "Paused", never "Down".
+    function pausedSystemsFromConfig(config) {
+        var paused = {};
+        var services = config && Array.isArray(config.services) ? config.services : [];
+        for (var i = 0; i < services.length; i += 1) {
+            var entry = services[i];
+            if (!entry || !Array.isArray(entry.systems)) continue;
+            var note = typeof entry.note === "string" ? entry.note : "";
+            for (var j = 0; j < entry.systems.length; j += 1) {
+                if (typeof entry.systems[j] === "string" && entry.systems[j]) paused[entry.systems[j]] = note;
+            }
+        }
+        return paused;
+    }
+
+    function applyPausedSystems(systemValues, paused) {
+        for (var key in paused) {
+            if (Object.prototype.hasOwnProperty.call(paused, key) && Object.prototype.hasOwnProperty.call(systemValues, key)) {
+                systemValues[key] = "paused";
+            }
+        }
+        return systemValues;
+    }
+
+    async function fetchPausedSystems() {
+        try {
+            var res = await fetchWithTimeout("paused-services.json?v=" + Date.now(), { cache: "no-store" }, API_TIMEOUT_MS);
+            if (!res.ok) return {};
+            return pausedSystemsFromConfig(await res.json());
+        } catch (_pausedErr) {
+            return {};
+        }
     }
 
     function applyOverallStatus(statusMap) {
@@ -681,22 +730,26 @@
             if (liveSummary.embedding !== "unknown" && Object.prototype.hasOwnProperty.call(systemValues, "embedding")) {
                 systemValues.embedding = liveSummary.embedding;
             }
+            var paused = await fetchPausedSystems();
+            applyPausedSystems(systemValues, paused);
 
-            applySystemStatus("backend-status", systemValues.backend);
-            applySystemStatus("frontend-status", systemValues.frontend);
-            applySystemStatus("database-status", systemValues.database);
-            applySystemStatus("search-status", systemValues.search);
-            applySystemStatus("llm-status", systemValues.llm);
-            applySystemStatus("image-status", systemValues.image);
-            applySystemStatus("video-status", systemValues.video);
-            applySystemStatus("tts-status", systemValues.tts);
-            applySystemStatus("embedding-status", systemValues.embedding);
-            applySystemStatus("epaas-status", systemValues.epaas);
+            var systemKeys = ["backend", "frontend", "database", "search", "llm", "image", "video", "tts", "embedding", "epaas"];
+            for (var k = 0; k < systemKeys.length; k += 1) {
+                applySystemStatus(systemKeys[k] + "-status", systemValues[systemKeys[k]], paused[systemKeys[k]]);
+            }
             applyOverallStatus(systemValues);
             updateRecentIncident(incident, liveCriticalHealthy);
             renderPanels(events);
             await renderOpsMetricsPanel();
-            await renderIntelligenceReport(events);
+            if (systemValues.llm === "paused") {
+                var intelPanel = document.getElementById("intelligence-report-panel");
+                if (intelPanel) {
+                    intelPanel.className = "panel-empty";
+                    intelPanel.textContent = paused.llm || "SKIA intelligence is paused.";
+                }
+            } else {
+                await renderIntelligenceReport(events);
+            }
         } catch (error) {
             var freshnessBadge = document.getElementById("data-freshness");
             if (freshnessBadge) {

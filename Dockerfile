@@ -17,6 +17,7 @@ RUN rm -rf ./*
 COPY index.html     ./index.html
 COPY incidents.html ./incidents.html
 COPY incidents.json ./incidents.json
+COPY paused-services.json ./paused-services.json
 COPY favicon.ico    ./favicon.ico
 COPY icon.ico       ./icon.ico
 

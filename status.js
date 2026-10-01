@@ -208,6 +208,9 @@
             search: systems.search || fallback,
             llm: systems.llm || fallback,
             image: imageFallback,
+            video: systems.video || "unknown",
+            tts: systems.tts || "unknown",
+            embedding: systems.embedding || "unknown",
             epaas: systems.epaas || fallback
         };
     }
@@ -319,11 +322,11 @@
                 summary.database = "down";
             }
         }
-        // Media engines — prefer /api/{service}/health; fallback /api/health/{service} or /health (see backend routes).
+        // Media engines — backend serves /api/health/{video,tts,embedding}; /api/{service}/health kept as fallback.
         summary.image = await probeMediaServiceHealth("/api/image/health", ["/api/health/image", "/health/image"]);
-        summary.video = await probeMediaServiceHealth("/api/video/health", ["/api/health/video", "/health/video"]);
-        summary.tts = await probeMediaServiceHealth("/api/tts/health", ["/api/health/tts", "/health/tts"]);
-        summary.embedding = await probeMediaServiceHealth("/api/embedding/health", ["/api/local/engines/embedding-probe", "/health"]);
+        summary.video = await probeMediaServiceHealth("/api/health/video", ["/api/video/health"]);
+        summary.tts = await probeMediaServiceHealth("/api/health/tts", ["/api/tts/health"]);
+        summary.embedding = await probeMediaServiceHealth("/api/health/embedding", ["/api/embedding/health"]);
         return summary;
     }
 

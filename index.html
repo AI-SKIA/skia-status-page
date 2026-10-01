@@ -462,6 +462,7 @@
 
         .system-row {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
             padding: 6px 8px;
@@ -488,6 +489,17 @@
             .system-status.down {
                 color: var(--err);
             }
+
+            .system-status.paused {
+                color: rgba(245, 245, 247, 0.6);
+            }
+
+        .system-note {
+            flex-basis: 100%;
+            margin-top: 2px;
+            font-size: 11px;
+            color: rgba(245, 245, 247, 0.55);
+        }
 
         .footer {
             display: flex;

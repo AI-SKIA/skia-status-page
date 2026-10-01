@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "service": "skia-serve",
+            "systems": ["llm"],
+            "note": "Paused on purpose. Chat resumes when it is switched back on."
+        },
+        {
+            "service": "image-engine",
+            "systems": ["image"],
+            "note": "Paused on purpose. Image generation resumes when it is switched back on."
+        },
+        {
+            "service": "video-engine",
+            "systems": ["video"],
+            "note": "Paused on purpose. Video generation resumes when it is switched back on."
+        }
+    ]
+}

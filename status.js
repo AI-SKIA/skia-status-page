@@ -473,10 +473,63 @@
         }).join("");
     }
 
+    function isActiveRow(e) {
+        return !!e && String(e.status || "").toLowerCase() !== "superseded";
+    }
+
+    function fmtMark(value) {
+        var n = numeric(value);
+        if (n === null) return "TBD";
+        return n <= 1 ? (n * 100).toFixed(1) + "%" : String(n);
+    }
+
+    function supersessionPanelHtml(events) {
+        var rows = events.filter(function (e) { return isActiveRow(e) && e.type === "supersession_milestone"; });
+        if (!rows.length) {
+            return '<div class="panel-empty">Supersession milestones will appear here when SKIA passes a benchmark baseline.</div>';
+        }
+        return rows.slice(0, 10).map(function (e) {
+            var hasMarks = e.skiaMark != null || e.claudeOpus47Mark != null;
+            return '<div class="panel-row">' +
+                '<span class="panel-key">' + esc(e.title || e.dimension || "milestone") + '</span>' +
+                (hasMarks ? '<span class="panel-value">SKIA ' + esc(fmtMark(e.skiaMark)) + ' vs Opus ' + esc(fmtMark(e.claudeOpus47Mark)) + '</span>' : '') +
+                '<span class="panel-meta">' + esc((e.dimension ? e.dimension + " · " : "") + (e.timestamp || "unknown time")) + '</span>' +
+                '</div>';
+        }).join("");
+    }
+
+    function driftPanelHtml(events) {
+        var rows = events.filter(function (e) {
+            return isActiveRow(e) && (e.type === "drift_alert" || e.type === "fairness_drift");
+        });
+        if (!rows.length) {
+            return '<div class="panel-empty">No drift detected. Drift alerts are informational and do not change system status.</div>';
+        }
+        return rows.slice(0, 10).map(function (e) {
+            var kind = e.type === "fairness_drift" ? "Fairness drift" : "Operational drift";
+            var state = String(e.status || "investigating");
+            return '<div class="panel-row">' +
+                '<span class="panel-key">' + esc(e.title || kind) + '</span>' +
+                '<span class="panel-value">' + esc(e.impact || kind) + '</span>' +
+                '<span class="panel-meta">' + esc(kind + " · " + state.charAt(0).toUpperCase() + state.slice(1) + " · " + (e.start || e.timestamp || "unknown time")) + '</span>' +
+                '</div>';
+        }).join("");
+    }
+
+    function renderSupersessionPanel(events) {
+        var panel = document.getElementById("supersession-panel");
+        if (panel) panel.innerHTML = supersessionPanelHtml(events);
+    }
+
+    function renderDriftPanel(events) {
+        var panel = document.getElementById("drift-panel");
+        if (panel) panel.innerHTML = driftPanelHtml(events);
+    }
+
     function renderCapabilityPanel(events) {
         var panel = document.getElementById("capability-panel");
         if (!panel) return;
-        var rows = events.filter(function (e) { return e.type === "capability_update"; });
+        var rows = events.filter(function (e) { return isActiveRow(e) && e.type === "capability_update"; });
         if (!rows.length) {
             panel.innerHTML = '<div class="panel-empty">Capability maturity updates will appear here as SKIA evolves.</div>';
             return;
@@ -552,7 +605,9 @@
     function renderIntelligenceDiagnosticsPanel(events) {
         var panel = document.getElementById("intelligence-diagnostics-panel");
         if (!panel) return;
-        var rows = events.filter(function (e) { return e.type === "weakness_analysis" || e.type === "strategy_update"; });
+        var rows = events.filter(function (e) {
+            return isActiveRow(e) && (e.type === "weakness_analysis" || e.type === "strategy_update");
+        });
         if (!rows.length) {
             panel.innerHTML = '<div class="panel-empty">Intelligence diagnostics will appear when new insights are published.</div>';
             return;
@@ -603,6 +658,8 @@
         renderReasoningPanel(events);
         renderMemoryPanel(events);
         renderIntelligenceDiagnosticsPanel(events);
+        renderSupersessionPanel(events);
+        renderDriftPanel(events);
     }
 
     async function readIntelligenceResponse(response) {

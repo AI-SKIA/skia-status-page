@@ -16,14 +16,8 @@ jobs:
       - name: Validate incidents JSON syntax
         run: jq empty incidents.json
 
-      - name: Validate incidents schema basics
-        run: |
-          set -euo pipefail
-          jq -e '
-            type == "array" and
-            (all(.[]; has("type"))) and
-            (all(.[]; .type == "incident" or .type == "capability_update" or .type == "eval_result" or .type == "strategy_update" or .type == "weakness_analysis" or .type == "supersession_milestone" or .type == "drift_alert" or .type == "fairness_drift" or .type == "status_heartbeat"))
-          ' incidents.json > /dev/null
+      - name: Validate incidents against the event schema
+        run: node scripts/validate-ledger.mjs incidents.json
 
       - name: Verify static assets exist
         run: |
@@ -33,4 +27,4 @@ jobs:
           test -f nginx.conf
 
       - name: Status script tests
-        run: node --test tests/status-systems.test.mjs
+        run: node --test tests/status-systems.test.mjs tests/ledger.test.mjs

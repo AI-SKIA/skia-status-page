@@ -31,3 +31,6 @@ jobs:
           test -f status.js
           test -f incidents.js
           test -f nginx.conf
+
+      - name: Status script tests
+        run: node --test tests/status-systems.test.mjs

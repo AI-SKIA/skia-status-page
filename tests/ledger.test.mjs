@@ -1,6 +1,10 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { execFileSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { applyLedgerHygiene, RETENTION } from "../scripts/apply-ledger-hygiene.mjs";
 import { validateLedger } from "../scripts/validate-ledger.mjs";
 
@@ -82,6 +86,15 @@ test("validator reports unknown types, missing fields, bad scores, superseded wi
     assert.ok(errors.some((e) => e.includes("superseded without supersededReason")));
     assert.ok(errors.some((e) => e.includes("duplicate id")));
     assert.deepEqual(validateLedger({}), ["ledger must be a JSON array"]);
+});
+
+test("the hygiene CLI leaves an already-compliant ledger byte-for-byte unchanged", () => {
+    const dir = mkdtempSync(join(tmpdir(), "ledger-hygiene-"));
+    const file = join(dir, "incidents.json");
+    const raw = JSON.stringify([{ type: "strategy_update", taskType: "a", timestamp: day(0), status: "active" }], null, 2);
+    writeFileSync(file, raw);
+    execFileSync(process.execPath, [fileURLToPath(new URL("../scripts/apply-ledger-hygiene.mjs", import.meta.url)), file]);
+    assert.equal(readFileSync(file, "utf8"), raw);
 });
 
 test("the sync job applies hygiene and validates before committing, and CI validates the schema", () => {

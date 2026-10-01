@@ -42,6 +42,6 @@ if (isCli) {
   const rows = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
   if (!Array.isArray(rows)) throw new Error(`${ledgerPath} is not a JSON array`);
   const { superseded } = applyLedgerHygiene(rows);
-  fs.writeFileSync(ledgerPath, `${JSON.stringify(rows, null, 2)}\n`);
+  if (Object.values(superseded).some((n) => n > 0)) fs.writeFileSync(ledgerPath, `${JSON.stringify(rows, null, 2)}\n`);
   console.log(`Ledger hygiene applied to ${rows.length} rows; newly superseded: ${JSON.stringify(superseded)}`);
 }

@@ -73,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-10-01T21:50:35.720Z",
-    "lastChecked": "2026-10-01T21:50:35.720Z",
+    "timestamp": "2026-10-02T01:35:35.721Z",
+    "lastChecked": "2026-10-02T01:35:35.721Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -1797,7 +1797,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.163Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "type": "strategy_update",
@@ -1807,7 +1808,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.174Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "type": "strategy_update",
@@ -1817,7 +1819,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.188Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "type": "strategy_update",
@@ -1827,7 +1830,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.200Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "type": "strategy_update",
@@ -1837,6 +1841,90 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.212Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:27.814Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:27.826Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:27.834Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:28.292Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:28.310Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:28.390Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:28.398Z",
+    "status": "active"
+  },
+  {
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-02T00:33:28.404Z",
     "status": "active"
   }
 ]

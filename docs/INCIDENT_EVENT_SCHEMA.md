@@ -22,8 +22,9 @@ It supersedes minimal schema notes in `docs/schema/incidents-json-schema.md` and
 - `strategy_update`
 - `drift_alert` — operational drift (moderation/challenger composite); from `SkiaSelfHealJob`
 - `fairness_drift` — fairness monitoring drift; from `SkiaSelfHealJob` when `DriftMonitorService` fairness signal triggers
+- `status_heartbeat` — single automated health-check row (`id: skia-status-heartbeat`) refreshed by `SkiaSelfHealJob`
 
-`drift_alert` and `fairness_drift` are **informational** on `index.html` (not outage rows on `incidents.html`). Consumers must not treat them as unresolved production incidents unless `status` indicates an active outage.
+`drift_alert` and `fairness_drift` are **informational** on `index.html` (Drift monitoring panel; not outage rows on `incidents.html`). Consumers must not treat them as unresolved production incidents unless `status` indicates an active outage.
 
 ## Common fields
 
@@ -166,6 +167,36 @@ Optional:
 - `projectedScoreImprovement` (number)
 - `evidencePairs` (number)
 
+### `drift_alert` and `fairness_drift`
+
+Required:
+
+- `id` (string)
+- `type = "drift_alert"` or `"fairness_drift"`
+- `title` (string)
+- `status` (string)
+- `start` (string)
+
+Optional:
+
+- `impact` (string)
+- `lastChecked` (string)
+
+### `status_heartbeat`
+
+Required:
+
+- `id` (string)
+- `type = "status_heartbeat"`
+- `status` (string)
+- `timestamp` (string)
+- `systems` (object map of subsystem name -> status)
+
+Optional:
+
+- `title` (string)
+- `lastChecked` (string)
+
 ## Producer/consumer contract
 
 ### Producers
@@ -190,6 +221,8 @@ Optional:
   4. Remove deprecated keys in a later cycle.
 
 ## Validation checklist
+
+`node scripts/validate-ledger.mjs incidents.json` enforces the type enum, the per-type required fields above, unique `id` values, `skiaScore` in 0..1, and a `supersededReason` on every superseded row. Status CI and the ledger sync job both run it.
 
 - JSON parses successfully.
 - Every new event includes `type`, status, and stable ID.

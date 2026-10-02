@@ -52,6 +52,8 @@ jobs:
             sleep $((attempt * 5))
           done
           jq empty incidents.json.new
+          node scripts/apply-ledger-hygiene.mjs incidents.json.new
+          node scripts/validate-ledger.mjs incidents.json.new
           mv incidents.json.new incidents.json
 
       - name: Commit and push if changed

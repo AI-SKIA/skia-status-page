@@ -1,52 +1,47 @@
 /**
- * Apply strategy_update retention (last 5 active) and ensure sovereign_context_upgrade_2M eval_result.
- * Run: node scripts/apply-ledger-hygiene.mjs
+ * Ledger retention (docs/operations/ledger-hygiene.md): keep the newest N active rows per type and
+ * mark older ones superseded with a reason. Rows are never deleted or re-activated.
+ * Run: node scripts/apply-ledger-hygiene.mjs [path/to/incidents.json]
  */
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ledgerPath = path.join(__dirname, '..', 'incidents.json');
+export const RETENTION = {
+  strategy_update: 5,
+  capability_update: 50,
+  weakness_analysis: 20,
+  supersession_milestone: 20,
+};
 
-const incidents = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
-
-if (!incidents.some((i) => i.id === 'sovereign_context_upgrade_2M')) {
-  incidents.unshift({
-    id: 'sovereign_context_upgrade_2M',
-    type: 'eval_result',
-    suite: 'Sovereign Context Window',
-    title: '2M sovereign input context live',
-    skiaScore: 1,
-    timestamp: '2026-05-24T09:47:41.801Z',
-    status: 'active',
-    providerBacked: true,
-  });
+function rowTime(row) {
+  const t = Date.parse(String(row.timestamp ?? row.start ?? ''));
+  return Number.isFinite(t) ? t : 0;
 }
 
-const strategyRows = incidents
-  .map((item, index) => ({ item, index }))
-  .filter(({ item }) => item.type === 'strategy_update');
-
-strategyRows.sort((a, b) => {
-  const ta = Date.parse(String(a.item.timestamp ?? 0));
-  const tb = Date.parse(String(b.item.timestamp ?? 0));
-  return tb - ta;
-});
-
-let superseded = 0;
-strategyRows.forEach(({ item }, rank) => {
-  if (rank < 5) {
-    item.status = 'active';
-    return;
+/** Mutates and returns `rows`; reports how many rows were newly superseded per type. */
+export function applyLedgerHygiene(rows) {
+  const superseded = {};
+  for (const [type, keep] of Object.entries(RETENTION)) {
+    const active = rows
+      .filter((row) => row && row.type === type && String(row.status ?? '').toLowerCase() !== 'superseded')
+      .sort((a, b) => rowTime(b) - rowTime(a));
+    superseded[type] = 0;
+    for (const row of active.slice(keep)) {
+      row.status = 'superseded';
+      row.supersededReason = row.supersededReason ?? `ledger-hygiene: ${type} retention (last ${keep} active)`;
+      superseded[type] += 1;
+    }
   }
-  if (item.status !== 'superseded') superseded += 1;
-  item.status = 'superseded';
-  item.supersededReason =
-    item.supersededReason ?? 'ledger-hygiene: strategy_update retention (last 5 active)';
-});
+  return { rows, superseded };
+}
 
-fs.writeFileSync(ledgerPath, `${JSON.stringify(incidents, null, 2)}\n`);
-console.log(
-  `Ledger hygiene applied: ${strategyRows.length} strategy_update rows; ${superseded} marked superseded; sovereign_context_upgrade_2M present.`
-);
+const isCli = process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+if (isCli) {
+  const ledgerPath = path.resolve(process.argv[2] ?? path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'incidents.json'));
+  const rows = JSON.parse(fs.readFileSync(ledgerPath, 'utf8'));
+  if (!Array.isArray(rows)) throw new Error(`${ledgerPath} is not a JSON array`);
+  const { superseded } = applyLedgerHygiene(rows);
+  if (Object.values(superseded).some((n) => n > 0)) fs.writeFileSync(ledgerPath, `${JSON.stringify(rows, null, 2)}\n`);
+  console.log(`Ledger hygiene applied to ${rows.length} rows; newly superseded: ${JSON.stringify(superseded)}`);
+}

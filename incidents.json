@@ -1,5 +1,26 @@
 [
   {
+    "id": "skia-health-1791056457391",
+    "type": "incident",
+    "title": "System degraded — frontend failure",
+    "status": "monitoring",
+    "start": "2026-10-03 19:40 UTC",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
+    "systems": {
+      "frontend": "operational",
+      "backend": "operational",
+      "database": "operational",
+      "auth": "operational",
+      "chat": "operational",
+      "image": "operational",
+      "search": "operational",
+      "llm": "operational",
+      "epaas": "operational"
+    },
+    "lastChecked": "2026-10-03T19:55:37.384Z",
+    "healthyRuns": 1
+  },
+  {
     "id": "sovereign_context_upgrade_2M",
     "type": "eval_result",
     "suite": "Sovereign Context Window",
@@ -51,8 +72,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-10-03T17:15:42.935Z",
-    "lastChecked": "2026-10-03T17:15:42.935Z",
+    "timestamp": "2026-06-12T23:00:00.000Z",
+    "lastChecked": "2026-06-12T23:00:00.000Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",

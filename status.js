@@ -641,7 +641,13 @@
             var data = await response.json();
             var embed = data.embeddingVector || {};
             panel.innerHTML =
-                '<div class="panel-row"><span class="panel-key">Sovereign fallback</span><span class="panel-value">' + esc(String(data.sovereignFallbackRatePct != null ? data.sovereignFallbackRatePct : "—") + "%") + '</span></div>' +
+                '<div class="panel-row"><span class="panel-key">Sovereign path availability</span><span class="panel-value">' + esc((function () {
+                    if (data.sovereignFallbackRatePct == null) return "—%";
+                    var pct = Number(data.sovereignFallbackRatePct);
+                    if (Number.isNaN(pct)) return "—%";
+                    var availability = Math.max(0, Math.min(100, Math.round((100 - pct) * 100) / 100));
+                    return String(availability) + "%";
+                })()) + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Output refusal</span><span class="panel-value">' + esc(String(data.outputRefusalRatePct != null ? data.outputRefusalRatePct : "—") + "%") + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Challenger fail</span><span class="panel-value">' + esc(String(data.adversarialChallengerFailRatePct != null ? data.adversarialChallengerFailRatePct : "—") + "%") + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Embedding / vector</span><span class="panel-value">' +

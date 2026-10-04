@@ -641,7 +641,7 @@
             var data = await response.json();
             var embed = data.embeddingVector || {};
             // sovereignFallbackRatePct omitted: OpsMetricsService lifetime chat denominator +
-            // Math.max(chatRequests,1) makes zero traffic look like 0% fallback (false 100%).
+            // Math.max(chatRequests,1) makes zero traffic look like 0% (false 100%).
             // Not a sovereign-path health signal — do not show a percentage on the public page.
             panel.innerHTML =
                 '<div class="panel-row"><span class="panel-key">Output refusal</span><span class="panel-value">' + esc(String(data.outputRefusalRatePct != null ? data.outputRefusalRatePct : "—") + "%") + '</span></div>' +

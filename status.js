@@ -640,8 +640,10 @@
             if (!response.ok) throw new Error("HTTP " + response.status);
             var data = await response.json();
             var embed = data.embeddingVector || {};
+            // sovereignFallbackRatePct omitted: OpsMetricsService lifetime chat denominator +
+            // Math.max(chatRequests,1) makes zero traffic look like 0% (false 100%).
+            // Not a sovereign-path health signal — do not show a percentage on the public page.
             panel.innerHTML =
-                '<div class="panel-row"><span class="panel-key">Sovereign fallback</span><span class="panel-value">' + esc(String(data.sovereignFallbackRatePct != null ? data.sovereignFallbackRatePct : "—") + "%") + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Output refusal</span><span class="panel-value">' + esc(String(data.outputRefusalRatePct != null ? data.outputRefusalRatePct : "—") + "%") + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Challenger fail</span><span class="panel-value">' + esc(String(data.adversarialChallengerFailRatePct != null ? data.adversarialChallengerFailRatePct : "—") + "%") + '</span></div>' +
                 '<div class="panel-row"><span class="panel-key">Embedding / vector</span><span class="panel-value">' +

@@ -73,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-10-07T13:11:45.696Z",
-    "lastChecked": "2026-10-07T13:11:45.696Z",
+    "timestamp": "2026-10-07T19:11:45.701Z",
+    "lastChecked": "2026-10-07T19:11:45.701Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -2081,7 +2081,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-10-06T14:11:45.523Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "id": "strategy-update-agentic-1791295905532",
@@ -2092,7 +2093,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-10-06T14:11:45.532Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "id": "strategy-update-creative-1791295905541",
@@ -2103,7 +2105,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-10-06T14:11:45.541Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "id": "strategy-update-factual-1791295905549",
@@ -2114,7 +2117,8 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-10-06T14:11:45.549Z",
-    "status": "active"
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
   },
   {
     "id": "strategy-update-tool-use-1791295905557",
@@ -2125,6 +2129,98 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-10-06T14:11:45.557Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "id": "strategy-update-code-1791382305504",
+    "type": "strategy_update",
+    "taskType": "code",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.504Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "id": "strategy-update-math-1791382305520",
+    "type": "strategy_update",
+    "taskType": "math",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.520Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "id": "strategy-update-long-context-1791382305530",
+    "type": "strategy_update",
+    "taskType": "long-context",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.530Z",
+    "status": "superseded",
+    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+  },
+  {
+    "id": "strategy-update-multimodal-1791382305540",
+    "type": "strategy_update",
+    "taskType": "multimodal",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.540Z",
+    "status": "active"
+  },
+  {
+    "id": "strategy-update-agentic-1791382305549",
+    "type": "strategy_update",
+    "taskType": "agentic",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.549Z",
+    "status": "active"
+  },
+  {
+    "id": "strategy-update-creative-1791382305557",
+    "type": "strategy_update",
+    "taskType": "creative",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.557Z",
+    "status": "active"
+  },
+  {
+    "id": "strategy-update-factual-1791382305568",
+    "type": "strategy_update",
+    "taskType": "factual",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.568Z",
+    "status": "active"
+  },
+  {
+    "id": "strategy-update-tool-use-1791382305577",
+    "type": "strategy_update",
+    "taskType": "tool-use",
+    "topStrategyBefore": "chain-of-thought",
+    "topStrategyAfter": "chain-of-thought",
+    "projectedScoreImprovement": 0,
+    "evidencePairs": 0,
+    "timestamp": "2026-10-07T14:11:45.577Z",
     "status": "active"
   }
 ]

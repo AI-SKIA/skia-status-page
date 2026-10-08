@@ -2,7 +2,7 @@
   "surface": "skia-status",
   "version": "1.1.0",
   "long_context": "2M",
-  "featureCount": 113,
+  "featureCount": 115,
   "workspaceCount": 10,
   "capabilities": [
     "identity",

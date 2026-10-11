@@ -1,5 +1,27 @@
 [
   {
+    "id": "skia-health-1791737976505",
+    "type": "incident",
+    "title": "System degraded — frontend failure",
+    "status": "resolved",
+    "start": "2026-10-11 16:59 UTC",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
+    "systems": {
+      "frontend": "operational",
+      "backend": "operational",
+      "database": "operational",
+      "auth": "operational",
+      "chat": "operational",
+      "image": "operational",
+      "search": "operational",
+      "llm": "operational",
+      "epaas": "operational"
+    },
+    "lastChecked": "2026-10-11T17:44:16.503Z",
+    "healthyRuns": 2,
+    "end": "2026-10-11T17:44:16.503Z"
+  },
+  {
     "id": "sovereign_context_upgrade_2M",
     "type": "eval_result",
     "suite": "Sovereign Context Window",
@@ -51,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-10-11T13:21:45.694Z",
-    "lastChecked": "2026-10-11T13:21:45.694Z",
+    "timestamp": "2026-10-11T18:14:16.478Z",
+    "lastChecked": "2026-10-11T18:14:16.478Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
@@ -1775,8 +1797,7 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.163Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+    "status": "active"
   },
   {
     "type": "strategy_update",
@@ -1786,8 +1807,7 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.174Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+    "status": "active"
   },
   {
     "type": "strategy_update",
@@ -1797,8 +1817,7 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.188Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+    "status": "active"
   },
   {
     "type": "strategy_update",
@@ -1808,8 +1827,7 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.200Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
+    "status": "active"
   },
   {
     "type": "strategy_update",
@@ -1819,98 +1837,6 @@
     "projectedScoreImprovement": 0,
     "evidencePairs": 0,
     "timestamp": "2026-05-27T22:49:58.212Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
-  },
-  {
-    "id": "strategy-update-code-1791720000389",
-    "type": "strategy_update",
-    "taskType": "code",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.389Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
-  },
-  {
-    "id": "strategy-update-math-1791720000398",
-    "type": "strategy_update",
-    "taskType": "math",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.398Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
-  },
-  {
-    "id": "strategy-update-long-context-1791720000406",
-    "type": "strategy_update",
-    "taskType": "long-context",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.406Z",
-    "status": "superseded",
-    "supersededReason": "ledger-hygiene: strategy_update retention (last 5 active)"
-  },
-  {
-    "id": "strategy-update-multimodal-1791720000414",
-    "type": "strategy_update",
-    "taskType": "multimodal",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.414Z",
-    "status": "active"
-  },
-  {
-    "id": "strategy-update-agentic-1791720000419",
-    "type": "strategy_update",
-    "taskType": "agentic",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.419Z",
-    "status": "active"
-  },
-  {
-    "id": "strategy-update-creative-1791720000426",
-    "type": "strategy_update",
-    "taskType": "creative",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.426Z",
-    "status": "active"
-  },
-  {
-    "id": "strategy-update-factual-1791720000432",
-    "type": "strategy_update",
-    "taskType": "factual",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.432Z",
-    "status": "active"
-  },
-  {
-    "id": "strategy-update-tool-use-1791720000440",
-    "type": "strategy_update",
-    "taskType": "tool-use",
-    "topStrategyBefore": "chain-of-thought",
-    "topStrategyAfter": "chain-of-thought",
-    "projectedScoreImprovement": 0,
-    "evidencePairs": 0,
-    "timestamp": "2026-10-11T12:00:00.440Z",
     "status": "active"
   }
 ]

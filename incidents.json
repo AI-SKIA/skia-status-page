@@ -1,23 +1,25 @@
 [
   {
-    "id": "skia-health-1791850847747",
+    "id": "skia-health-1791858221261",
     "type": "incident",
     "title": "System degraded — frontend failure",
-    "status": "investigating",
-    "start": "2026-10-13 00:20 UTC",
-    "impact": "Critical systems failed: frontend. Suggested actions: For frontend: add targeted health checks, retries with jitter, and instrument metrics to diagnose recurring issues. | Add DB connection pool monitoring, enforce connection timeouts, add retry-with-backoff for transient DB errors, and surface DB health metrics. | Add search timeouts and exponential backoff retries; implement fallback-to-secondary-search and cache popular queries.",
+    "status": "resolved",
+    "start": "2026-10-13 02:23 UTC",
+    "impact": "Critical systems are currently healthy. Monitoring additional runs before auto-resolution.",
     "systems": {
-      "frontend": "degraded",
+      "frontend": "operational",
       "backend": "operational",
       "database": "operational",
-      "auth": "degraded",
+      "auth": "operational",
       "chat": "operational",
       "image": "operational",
       "search": "operational",
       "llm": "operational",
       "epaas": "operational"
     },
-    "lastChecked": "2026-10-13T00:20:47.747Z"
+    "lastChecked": "2026-10-13T03:08:26.170Z",
+    "healthyRuns": 2,
+    "end": "2026-10-13T03:08:26.169Z"
   },
   {
     "id": "sovereign_context_upgrade_2M",
@@ -71,8 +73,8 @@
     "type": "status_heartbeat",
     "title": "Automated health check",
     "status": "active",
-    "timestamp": "2026-06-12T23:00:00.000Z",
-    "lastChecked": "2026-06-12T23:00:00.000Z",
+    "timestamp": "2026-10-13T06:53:26.147Z",
+    "lastChecked": "2026-10-13T06:53:26.147Z",
     "systems": {
       "frontend": "operational",
       "backend": "operational",
